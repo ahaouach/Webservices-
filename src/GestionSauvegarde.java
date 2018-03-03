@@ -68,7 +68,7 @@ public abstract class GestionSauvegarde {
 		
 	}
 	
-	/*public void sauvegarde(Usager usager) {
+	public void sauvegarde(Usagers usager) {
 		
-	}*/
+	}
 }
