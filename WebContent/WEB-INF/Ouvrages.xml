@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="Bibliotheque.xsl"?>
+<!DOCTYPE Bibliotheque SYSTEM "Bibliotheque.dtd">
+<Bibliotheque>
+
+	<Theme>
+		<Libelle>Sciences</Libelle>
+		
+		<Ouvrage exclu="false" dispo="true">
+			<Reference>0001SCI</Reference>
+			<Titre>Introduction au XML</Titre>
+			<Edition>2</Edition>
+			<Annee>2017</Annee>
+			<ISBN>000123</ISBN>
+			<NbreExemplaires>30</NbreExemplaires>
+			<Commentaires>Techno du web</Commentaires>
+			
+			<Auteur>
+				<IdAuteur>UB001JB</IdAuteur>
+				<Nom>Jenny</Nom>
+				<Prenom>Benois-Pineau</Prenom>	
+			</Auteur>
+	
+			<Editeur>
+				<IdEditeur>1</IdEditeur>
+				<MaisonDedition>Hachette</MaisonDedition>
+			</Editeur>
+			
+		</Ouvrage>
+		
+		<Ouvrage exclu="false" dispo="false">
+			<Reference>0002SCI</Reference>
+			<Titre>Web Services</Titre>
+			<Edition>5</Edition>
+			<Annee>2013</Annee>
+			<ISBN>000124</ISBN>
+			<NbreExemplaires>50</NbreExemplaires>
+			<Commentaires>Techno du web</Commentaires>
+			
+			<Auteur>
+				<IdAuteur>UB002LG</IdAuteur>
+				<Nom>Graciannette</Nom>
+				<Prenom>Luc</Prenom>	
+			</Auteur>
+	
+			<Editeur>
+				<IdEditeur>2</IdEditeur>
+				<MaisonDedition>EDITIS</MaisonDedition>
+			</Editeur>
+			
+		</Ouvrage>
+	
+	</Theme>
+	
+	<Theme>
+		<Libelle>Litterature</Libelle>
+		
+		<Ouvrage exclu="false" dispo="true">
+			<Reference>0001LIT</Reference>
+			<Titre>Le Père Goriot</Titre>
+			<Edition>2</Edition>
+			<Annee>2004</Annee>
+			<ISBN>000752</ISBN>
+			<NbreExemplaires>100</NbreExemplaires>
+			<Commentaires>Roman classique</Commentaires>
+			
+			<Auteur>
+				<IdAuteur>FR001BH</IdAuteur>
+				<Nom>Balzac</Nom>
+				<Prenom>Honore</Prenom>	
+			</Auteur>
+	
+			<Editeur>
+				<IdEditeur>1</IdEditeur>
+				<MaisonDedition>Hachette</MaisonDedition>
+			</Editeur>
+			
+		</Ouvrage>
+		
+		<Ouvrage exclu="true" dispo="true">
+			<Reference>0002LIT</Reference>
+			<Titre>Twilight</Titre>
+			<Edition>3</Edition>
+			<Annee>2014</Annee>
+			<ISBN>000469</ISBN>
+			<NbreExemplaires>150</NbreExemplaires>
+			<Commentaires>Horreur et romance</Commentaires>
+			
+			<Auteur>
+				<IdAuteur>US001FE</IdAuteur>
+				<Nom>Franc</Nom>
+				<Prenom>Edouard</Prenom>	
+			</Auteur>
+			
+			<Auteur>
+				<IdAuteur>US002MS</IdAuteur>
+				<Nom>Mayer</Nom>
+				<Prenom>Stephane</Prenom>	
+			</Auteur>
+	
+			<Editeur>
+				<IdEditeur>3</IdEditeur>
+				<MaisonDedition>ATLAS</MaisonDedition>
+			</Editeur>
+			
+		</Ouvrage>
+		
+		<Ouvrage exclu="false" dispo="true">
+			<Reference>0003LIT</Reference>
+			<Titre>Les misérables</Titre>
+			<Edition>1</Edition>
+			<Annee>1998</Annee>
+			<ISBN>000025</ISBN>
+			<NbreExemplaires>1000</NbreExemplaires>
+			<Commentaires>Classique comme livre</Commentaires>
+			
+			<Auteur>
+				<IdAuteur>FR002HV</IdAuteur>
+				<Nom>Hugo</Nom>
+				<Prenom>Victor</Prenom>	
+			</Auteur>
+	
+			<Editeur>
+				<IdEditeur>1</IdEditeur>
+				<MaisonDedition>Hachette</MaisonDedition>
+			</Editeur>
+			
+		</Ouvrage>
+		
+	</Theme>
+	
+	<Theme>
+		<Libelle>Economie</Libelle>
+		
+		<Ouvrage exclu="false" dispo="true">
+			<Reference>0001ECO</Reference>
+			<Titre>Economie Générale</Titre>
+			<Edition>5</Edition>
+			<Annee>2016</Annee>
+			<ISBN>0000150</ISBN>
+			<NbreExemplaires>100</NbreExemplaires>
+			<Commentaires>Pour apprendre les bases</Commentaires>
+			
+			<Auteur>
+				<IdAuteur>FR003JF</IdAuteur>
+				<Nom>Jean</Nom>
+				<Prenom>Francois</Prenom>	
+			</Auteur>
+	
+			<Editeur>
+				<IdEditeur>4</IdEditeur>
+				<MaisonDedition>Larousse</MaisonDedition>
+			</Editeur>
+			
+		</Ouvrage>
+		
+		<Ouvrage exclu="false" dispo="true">
+			<Reference>0002ECO</Reference>
+			<Titre>Offre et Demande</Titre>
+			<Edition>4</Edition>
+			<Annee>2015</Annee>
+			<ISBN>0000158</ISBN>
+			<NbreExemplaires>100</NbreExemplaires>
+			<Commentaires>Pour comprendre le marché</Commentaires>
+			
+			<Auteur>
+				<IdAuteur>FR004DM</IdAuteur>
+				<Nom>Dupond</Nom>
+				<Prenom>Marc</Prenom>	
+			</Auteur>
+	
+			<Editeur>
+				<IdEditeur>4</IdEditeur>
+				<MaisonDedition>Larousse</MaisonDedition>
+			</Editeur>
+			
+		</Ouvrage>
+		
+	</Theme>
+	
+	<Theme>
+		<Libelle>Politique</Libelle>
+		
+		<Ouvrage exclu="true" dispo="true">
+			<Reference>0001POL</Reference>
+			<Titre>Après la présidence</Titre>
+			<Edition>1</Edition>
+			<Annee>2018</Annee>
+			<ISBN>001567</ISBN>
+			<NbreExemplaires>100</NbreExemplaires>
+			<Commentaires>La retraite politique</Commentaires>
+			
+			<Auteur>
+				<IdAuteur>FR004HF</IdAuteur>
+				<Nom>Hollande</Nom>
+				<Prenom>Francois</Prenom>	
+			</Auteur>
+	
+			<Editeur>
+				<IdEditeur>4</IdEditeur>
+				<MaisonDedition>Larousse</MaisonDedition>
+			</Editeur>
+			
+		</Ouvrage>
+		
+		<Ouvrage exclu="false" dispo="true">
+			<Reference>0002POL</Reference>
+			<Titre>Assemblée Générale</Titre>
+			<Edition>8</Edition>
+			<Annee>2018</Annee>
+			<ISBN>001569</ISBN>
+			<NbreExemplaires>500</NbreExemplaires>
+			<Commentaires>Fonctionnement</Commentaires>
+			
+			<Auteur>
+				<IdAuteur>FR005RF</IdAuteur>
+				<Nom>De Rugy</Nom>
+				<Prenom>Francois</Prenom>	
+			</Auteur>
+			
+			<Auteur>
+				<IdAuteur>FR004DM</IdAuteur>
+				<Nom>Dupond</Nom>
+				<Prenom>Marc</Prenom>	
+			</Auteur>
+	
+			<Editeur>
+				<IdEditeur>4</IdEditeur>
+				<MaisonDedition>Larousse</MaisonDedition>
+			</Editeur>
+			
+		</Ouvrage>
+		
+	</Theme>
+	
+	<Theme>
+		<Libelle>Art</Libelle>
+		
+		<Ouvrage exclu="false" dispo="true">
+			<Reference>0001ART</Reference>
+			<Titre>Mona Lisa</Titre>
+			<Edition>1</Edition>
+			<Annee>1859</Annee>
+			<ISBN>071234</ISBN>
+			<NbreExemplaires>500</NbreExemplaires>
+			<Commentaires>Peinture</Commentaires>
+			
+			<Auteur>
+				<IdAuteur>FR006VL</IdAuteur>
+				<Nom>De Vinci</Nom>
+				<Prenom>Léonard</Prenom>	
+			</Auteur>
+			
+			<Auteur>
+				<IdAuteur>US001FE</IdAuteur>
+				<Nom>Franc</Nom>
+				<Prenom>Edouard</Prenom>	
+			</Auteur>
+			
+			<Auteur>
+				<IdAuteur>US002DW</IdAuteur>
+				<Nom>Denzel</Nom>
+				<Prenom>Washington</Prenom>	
+			</Auteur>
+	
+			<Editeur>
+				<IdEditeur>5</IdEditeur>
+				<MaisonDedition>Louvre</MaisonDedition>
+			</Editeur>
+			
+		</Ouvrage>
+		
+		
+	</Theme>
+	
+</Bibliotheque>

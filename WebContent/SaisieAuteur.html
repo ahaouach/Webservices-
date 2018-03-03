@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Saisie Auteur</title>
+</head>
+<body>
+	<form action="http://localhost:8080/Bibliotheque/AuteurServlet" name="saisieAuteur"> 
+		<h1> FORMULAIRE DE SAISIE D'AUTEUR </h1>
+		<table>
+			
+			<tr>
+				<td>
+					ID auteur :
+				</td>
+				<td>
+					<input type="text" size=10 name="idAuteur" maxlength="5"/>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					Nom auteur :
+				</td>
+				<td>
+					<input type="text" size=70 name="nomAuteur" />
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					Prénom auteur :
+				</td>
+				<td>
+					<input type="text" size=70 name="prenomAuteur" />
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<input type="submit" name="validerAuteur" value="Valider auteur"/>
+				</td>
+				
+			</tr>
+	
+		</table>
+	</form>
+</body>
+</html>
