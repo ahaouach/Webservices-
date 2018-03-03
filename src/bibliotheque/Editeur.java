@@ -4,11 +4,6 @@ public class Editeur {
 	private String idEditeur;
 	private String maisonEdition;
 
-	public Editeur() {
-		idEditeur = "";
-		maisonEdition = "";
-	}
-	
 	public Editeur(String id_Editeur, String maison_Edition) {
 		super();
 		idEditeur = id_Editeur;

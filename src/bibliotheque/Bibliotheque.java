@@ -2,11 +2,11 @@ package bibliotheque;
 
 public class Bibliotheque {
 	private String nom;
-	
+
 	public Bibliotheque() {
 		this.nom = "";
 	}
-	
+
 	public Bibliotheque(String nom) {
 		this.nom = nom;
 	}
@@ -18,9 +18,9 @@ public class Bibliotheque {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Bibliotheque :" + nom ;
+		return "Bibliotheque :" + nom;
 	}
 }

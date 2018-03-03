@@ -1,15 +1,5 @@
 package bibliotheque;
 
-
-import java.sql.Timestamp;
-
-/*import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity*/
 public class Ouvrage {
 	private String Reference;
 	private Auteur Auteur;
@@ -19,20 +9,18 @@ public class Ouvrage {
 	private String ISBN;
 	private int NbrExemplaire;
 	private String Commentaires;
+	private Boolean Disponible;
+	private String Categorie; 
+	private boolean emprunte = false	;
+	public boolean getEmprunte;
 	
-	public Ouvrage() {
-		Reference = "";
-		Auteur = new Auteur();
-		Editeur = new Editeur();
-		Titre = "";
-		Edition = "";
-		ISBN = "";
-		NbrExemplaire = 0;
-		Commentaires = "";
-	}
 	
-	public Ouvrage(String reference, Auteur auteur, Editeur editeur, String titre, String edition, String iSBN, int nbr,
-			String commentaires) {
+
+	
+
+	public Ouvrage(String reference, bibliotheque.Auteur auteur, bibliotheque.Editeur editeur, String titre,
+			String edition, String iSBN, int nbrExemplaire, String commentaires, Boolean disponible, String categorie,
+			boolean emprunte) {
 		super();
 		Reference = reference;
 		Auteur = auteur;
@@ -40,10 +28,14 @@ public class Ouvrage {
 		Titre = titre;
 		Edition = edition;
 		ISBN = iSBN;
-		NbrExemplaire = nbr;
+		NbrExemplaire = nbrExemplaire;
 		Commentaires = commentaires;
+		Disponible = disponible;
+		Categorie = categorie;
+		this.emprunte = emprunte;
 	}
 
+	
 	public String getReference() {
 		return Reference;
 	}
@@ -108,11 +100,47 @@ public class Ouvrage {
 		Commentaires = commentaires;
 	}
 
+	public int getNbrExemplaire() {
+		return NbrExemplaire;
+	}
+
+	public void setNbrExemplaire(int nbrExemplaire) {
+		NbrExemplaire = nbrExemplaire;
+	}
+
+	public void setReference(String reference) {
+		Reference = reference;
+	}
+
+	public Boolean getDisponible() {
+		return Disponible;
+	}
+
+	public void setDisponible(Boolean disponible) {
+		Disponible = disponible;
+	}
+
+	public String getCategorie() {
+		return Categorie;
+	}
+
+	public void setCategorie(String categorie) {
+		Categorie = categorie;
+	}
+
+	public boolean getEmprunte() {
+		return emprunte;
+	}
+
+	public void setEmprunte(boolean emprunte) {
+		this.emprunte = emprunte;
+	}
+
 	@Override
 	public String toString() {
 		return "Ouvrage [Reference=" + Reference + ", Auteur=" + Auteur + ", Editeur=" + Editeur + ", Titre=" + Titre
 				+ ", Edition=" + Edition + ", ISBN=" + ISBN + ", NbrExemplaire=" + NbrExemplaire + ", Commentaires="
-				+ Commentaires + "]";
+				+ Commentaires + ", Disponible=" + Disponible + ", Categorie=" + Categorie + "]";
 	}
 
 	@Override

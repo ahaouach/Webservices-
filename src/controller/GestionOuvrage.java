@@ -1,4 +1,4 @@
-package bibliotheque;
+package controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,19 +6,13 @@ import java.util.HashMap;
 import bibliotheque.Auteur;
 import bibliotheque.Editeur;
 import bibliotheque.Ouvrage;
-
+import bibliotheque.Usagers;
 
 public class GestionOuvrage {
 	private HashMap<String, Auteur> listAuteurs = new HashMap<>();
 	private HashMap<String, Editeur> listEditeurs = new HashMap<>();
 	private HashMap<String, Ouvrage> listOuvrages = new HashMap<>();
-	@SuppressWarnings("unused")
-	private HashMap<String, String> rechercheParTitre = new HashMap<>();
 
-	public GestionOuvrage() {
-		this.listOuvrages = new HashMap<String, Ouvrage>();
-	}
-	
 	public GestionOuvrage(HashMap<String, Ouvrage> listOuvrages) {
 		super();
 		this.listOuvrages = listOuvrages;
@@ -72,6 +66,7 @@ public class GestionOuvrage {
 		}
 		return resediteur;
 	}
+
 	public void Ajouter_Ouvrage(Ouvrage ouvrage) {
 		listOuvrages.put(ouvrage.getReference(), ouvrage);
 
@@ -85,6 +80,7 @@ public class GestionOuvrage {
 		return listOuvrages.get(ref);
 
 	}
+
 	public ArrayList<Ouvrage> RechercherOuvParTitre(String titre) {
 		ArrayList<Ouvrage> res = new ArrayList<>();
 		for (Ouvrage ouv : listOuvrages.values()) {
@@ -95,4 +91,5 @@ public class GestionOuvrage {
 		return res;
 
 	}
+
 }

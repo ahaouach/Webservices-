@@ -1,5 +1,10 @@
 package bibliotheque;
 
+/**
+ * la classe Auteur permet de creer l'objet Auteur avec ses attributs
+ *
+ * 
+ */
 public class Auteur {
 	private String idAuteur;
 	private String nomAuteur;
@@ -42,12 +47,12 @@ public class Auteur {
 		this.prenomAuteur = prenomAuteur;
 	}
 
-	
+	@Override
 	public String toString() {
 		return "Auteur [idAuteur=" + idAuteur + ", nomAuteur=" + nomAuteur + ", prenomAuteur=" + prenomAuteur + "]";
 	}
 
-	
+	@Override
 	public boolean equals(Object obj) {
 		if (!(obj instanceof Auteur))
 			return false;
@@ -56,7 +61,7 @@ public class Auteur {
 				&& prenomAuteur.equals(a.getPrenomAuteur());
 	}
 
-	
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
