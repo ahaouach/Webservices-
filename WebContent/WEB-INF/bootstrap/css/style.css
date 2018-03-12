@@ -1,0 +1,55 @@
+@charset "ISO-8859-1";
+
+body {
+	background-color: white;
+	color: blue;
+	
+}
+
+.dropdown .dropdown-menu{
+	color:  blue;
+}
+
+.inline-form input {
+            display: inline-block;
+            width: 100px;
+        }
+        
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  background-color: white;
+  
+}
+
+.menu-html: hover{
+	border-top: 5px solid;
+}
+
+.submenu{
+	display: none;	
+}
+nav li: hover .submenu{
+	display:inline-block;
+	position:absolute;
+	top:100%;
+	left:0px;
+	padding:0px;
+	z-index:10000;	
+}
+
+.submenu li {
+	border-bottom: 1 px solid #CC
+}
+
+.submenu li a {
+	padding: 15 px 30 px;
+	font-size: 13 px;
+	color:#222538;
+	width:270 px;
+	
+	
+	
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Projet </title>
+</head>
+<body>
+
+	<form action="" name="saisie" > 
+		<h1> Saisi Ouvrage </h1>
+		<table>
+			<tr>
+				<td>
+					Référence :
+				</td>
+				<td>
+					<input type="text" size=15 name="reference"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Titre :
+				</td>
+				<td>
+					<input type="text" size=70 name="titre" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Auteur(s) :
+				</td>
+				<td>
+					<input type="text" size=70 name="auteurs" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Editeur :
+				</td>
+				<td>
+					<input type="text" size=15 name="editeur"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Edition :
+				</td>
+				<td>
+					<input type="text" size=15 name="edition"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Ann&eacute;e d'&eacute;dition :
+				</td>
+				<td>
+					<input type="text" size=15 name="annee" maxlength="4"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					ISBN :
+				</td>
+				<td>
+					<input type="text" size=15 name="isbn" maxlength="6"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Nombre d'exemplaires :
+				</td>
+				<td>
+					<input type="number" size=15 name="nbreEx"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Disponibilit&eacute; :
+				</td>
+				<td>
+					<input type="checkbox" name="dispo"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Exclu du pr&ecirc;t :
+				</td>
+				<td>
+					<input type="checkbox" name="exclu"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Commentaires :
+				</td>
+				<td>
+					<input type="text" size=70 name="com" value=""/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" name="valider" value="Valider la saisie" onclick="envoyer()"/>
+				</td>
+				<td>
+					<input type="reset" name="annuler" value="Annulation"/>
+				</td>
+			</tr>
+	
+		</table>
+		<textarea name="message" rows="20" cols="100" disabled> </textarea> 
+	</form>
+</body>
+</html>
