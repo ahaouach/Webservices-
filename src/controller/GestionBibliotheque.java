@@ -4,16 +4,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import bibliotheque.Ouvrage;
-//import bibliotheque.Ouvrages;
 import bibliotheque.Usager;
 
 public class GestionBibliotheque {
 
 	private HashMap<String, Usager> listUsagers = new HashMap<>();
+	
 
 	public GestionBibliotheque(HashMap<String, Usager> listUsagers) {
 		super();
 		this.listUsagers = listUsagers;
+		
 	}
 
 	public HashMap<String, Usager> getListUsagers() {
@@ -23,6 +24,8 @@ public class GestionBibliotheque {
 	public void setListUsagers(HashMap<String, Usager> listUsagers) {
 		this.listUsagers = listUsagers;
 	}
+
+	
 
 	public void AjouterUsagers(Usager usager) {
 		listUsagers.put(usager.getIdUsager(), usager);
@@ -51,18 +54,22 @@ public class GestionBibliotheque {
 
 	public void emprunter(Ouvrage ouv) {
 
-		if (ouv.getEmprunte() == false) {
+		if (ouv.getEmprunte == false) {
 			ouv.setEmprunte(true);
 			System.out.println(" emprunter l'ouvrage !");
+			Usager.listEmpruntUser.put(ouv.getReference(), ouv);
 		} else
-			System.out.println("L'ouvrage est dÃ©jÃ  empruntÃ© !");
+			System.out.println("L'ouvrage est déjà emprunté !");
+		Usager.listEmpruntUser.get(ouv.getReference()); // liste des emprunt faites par un user
 	}
 
 	public void retourOuvrage(Ouvrage ouv) {
-		if (ouv.getEmprunte() == true) {
+		if (ouv.getEmprunte == true) {
 			ouv.setEmprunte(false);
 			System.out.println(" l'ouvrage est retourné !");
 		} else
 			System.out.println(" l'ouvrage est toujours emprunté !");
+		Usager.listEmpruntUser.get(ouv.getReference());
 	}
+
 }

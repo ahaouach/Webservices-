@@ -1,11 +1,14 @@
 package bibliotheque;
 
+import java.util.HashMap;
+
 public class Usager {
 	private String idUsager;
 	private String datenaiss;
 	private String nom;
 	private String prenom;
 	private String address;
+	public static HashMap<String, Ouvrage> listEmpruntUser = new HashMap<>(); // liste des emprunt de chaque user
 
 	public Usager(String idUsager, String datenaiss, String nom, String prenom, String address) {
 		super();
@@ -14,6 +17,7 @@ public class Usager {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.address = address;
+
 	}
 
 	public String getIdUsager() {
@@ -54,6 +58,14 @@ public class Usager {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	public HashMap<String, Ouvrage> getListEmpruntUser() {
+		return listEmpruntUser;
+	}
+
+	public void setListEmpruntUser(HashMap<String, Ouvrage> listEmpruntUser) {
+		this.listEmpruntUser = listEmpruntUser;
 	}
 
 	public boolean equals(Usager o) {

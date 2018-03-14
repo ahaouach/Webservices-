@@ -275,7 +275,11 @@
 		
 	</Theme>
 </Ouvrages>
-
 <Usagers>
+<IdUsager></IdUsager>
+<Datenaiss></Datenaiss>
+<Nom></Nom>
+<Prenom></Prenom>
+<Adresse></Adresse>
 </Usagers>	
 </Bibliotheque>
