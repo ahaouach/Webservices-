@@ -116,7 +116,7 @@ public abstract class GestionSauvegarde {
 		
 	}
 	
-	public static void sauvegarde(Usagers usager) {
+	public static void sauvegarde(Usager usager) {
 		
 	}
 }
