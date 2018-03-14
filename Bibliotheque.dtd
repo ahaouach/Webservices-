@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!ELEMENT Bibliotheque (Ouvrages, Usagers)>
+<!ELEMENT Ouvrages (Theme+)>
+<!ELEMENT Usagers (IdUsager?, Datenaiss, Nom, Prenom, Adresse)>
+
+<!ELEMENT Theme (Libelle+, Ouvrage+)>
+<!ELEMENT Ouvrage (Reference?, Titre, Edition, Annee, 
+					ISBN, NbreExemplaires, Commentaires,Categorie, Auteur+, Editeur) >				
+<!ELEMENT Auteur (IdAuteur?, Nom, Prenom)>
+<!ELEMENT Editeur (IdEditeur?, MaisonDedition)>	
+			
+<!ELEMENT Libelle (#PCDATA)>
+
+<!ELEMENT Reference (#PCDATA)>
+<!ELEMENT Titre (#PCDATA)>
+<!ELEMENT Edition (#PCDATA)>
+<!ELEMENT Annee (#PCDATA)>
+<!ELEMENT ISBN (#PCDATA)>
+<!ELEMENT NbreExemplaires (#PCDATA)>
+<!ELEMENT Commentaires (#PCDATA)>
+<!ELEMENT Categorie (#PCDATA)>
+
+
+<!ELEMENT IdAuteur (#PCDATA)>
+<!ELEMENT Nom (#PCDATA)>
+<!ELEMENT Prenom (#PCDATA)>
+
+<!ELEMENT IdEditeur (#PCDATA)>
+<!ELEMENT MaisonDedition (#PCDATA)>
+
+<!ELEMENT IdUsager (#PCDATA)>
+<!ELEMENT Datenaiss (#PCDATA)>
+<!ELEMENT Adresse (#PCDATA)>
+
+<!ATTLIST Ouvrage Disponible (true | false) #REQUIRED>
+<!ATTLIST Ouvrage Emprunte (true | false) #REQUIRED>

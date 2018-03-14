@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?xml-stylesheet type="text/xsl" href="Bibliotheque.xsl"?>
 <!DOCTYPE Bibliotheque SYSTEM "Bibliotheque.dtd">
+
 <Bibliotheque>
 
+<Ouvrages>
 	<Theme>
 		<Libelle>Sciences</Libelle>
 		
-		<Ouvrage exclu="false" dispo="true">
+		<Ouvrage Emprunte="false" Disponible="true">
 			<Reference>0001SCI</Reference>
 			<Titre>Introduction au XML</Titre>
 			<Edition>2</Edition>
@@ -14,7 +16,7 @@
 			<ISBN>000123</ISBN>
 			<NbreExemplaires>30</NbreExemplaires>
 			<Commentaires>Techno du web</Commentaires>
-			
+			<Categorie>Informatique</Categorie>
 			<Auteur>
 				<IdAuteur>UB001JB</IdAuteur>
 				<Nom>Jenny</Nom>
@@ -28,7 +30,7 @@
 			
 		</Ouvrage>
 		
-		<Ouvrage exclu="false" dispo="false">
+		<Ouvrage Emprunte="false" Disponible="false">
 			<Reference>0002SCI</Reference>
 			<Titre>Web Services</Titre>
 			<Edition>5</Edition>
@@ -36,7 +38,7 @@
 			<ISBN>000124</ISBN>
 			<NbreExemplaires>50</NbreExemplaires>
 			<Commentaires>Techno du web</Commentaires>
-			
+			<Categorie>Informatique</Categorie>
 			<Auteur>
 				<IdAuteur>UB002LG</IdAuteur>
 				<Nom>Graciannette</Nom>
@@ -55,7 +57,7 @@
 	<Theme>
 		<Libelle>Litterature</Libelle>
 		
-		<Ouvrage exclu="false" dispo="true">
+		<Ouvrage Emprunte="true" Disponible="false">
 			<Reference>0001LIT</Reference>
 			<Titre>Le Père Goriot</Titre>
 			<Edition>2</Edition>
@@ -63,7 +65,7 @@
 			<ISBN>000752</ISBN>
 			<NbreExemplaires>100</NbreExemplaires>
 			<Commentaires>Roman classique</Commentaires>
-			
+			<Categorie>Francaise</Categorie>
 			<Auteur>
 				<IdAuteur>FR001BH</IdAuteur>
 				<Nom>Balzac</Nom>
@@ -77,7 +79,7 @@
 			
 		</Ouvrage>
 		
-		<Ouvrage exclu="true" dispo="true">
+		<Ouvrage Emprunte="true" Disponible="true">
 			<Reference>0002LIT</Reference>
 			<Titre>Twilight</Titre>
 			<Edition>3</Edition>
@@ -85,7 +87,7 @@
 			<ISBN>000469</ISBN>
 			<NbreExemplaires>150</NbreExemplaires>
 			<Commentaires>Horreur et romance</Commentaires>
-			
+			<Categorie>Roman</Categorie>
 			<Auteur>
 				<IdAuteur>US001FE</IdAuteur>
 				<Nom>Franc</Nom>
@@ -105,7 +107,7 @@
 			
 		</Ouvrage>
 		
-		<Ouvrage exclu="false" dispo="true">
+		<Ouvrage Emprunte="false" Disponible="true">
 			<Reference>0003LIT</Reference>
 			<Titre>Les misérables</Titre>
 			<Edition>1</Edition>
@@ -113,7 +115,7 @@
 			<ISBN>000025</ISBN>
 			<NbreExemplaires>1000</NbreExemplaires>
 			<Commentaires>Classique comme livre</Commentaires>
-			
+			<Categorie>Francaise</Categorie>
 			<Auteur>
 				<IdAuteur>FR002HV</IdAuteur>
 				<Nom>Hugo</Nom>
@@ -132,7 +134,7 @@
 	<Theme>
 		<Libelle>Economie</Libelle>
 		
-		<Ouvrage exclu="false" dispo="true">
+		<Ouvrage Emprunte="false" Disponible="true">
 			<Reference>0001ECO</Reference>
 			<Titre>Economie Générale</Titre>
 			<Edition>5</Edition>
@@ -140,7 +142,7 @@
 			<ISBN>0000150</ISBN>
 			<NbreExemplaires>100</NbreExemplaires>
 			<Commentaires>Pour apprendre les bases</Commentaires>
-			
+			<Categorie>Economie</Categorie>
 			<Auteur>
 				<IdAuteur>FR003JF</IdAuteur>
 				<Nom>Jean</Nom>
@@ -154,7 +156,7 @@
 			
 		</Ouvrage>
 		
-		<Ouvrage exclu="false" dispo="true">
+		<Ouvrage Emprunte="false" Disponible="true">
 			<Reference>0002ECO</Reference>
 			<Titre>Offre et Demande</Titre>
 			<Edition>4</Edition>
@@ -162,7 +164,7 @@
 			<ISBN>0000158</ISBN>
 			<NbreExemplaires>100</NbreExemplaires>
 			<Commentaires>Pour comprendre le marché</Commentaires>
-			
+			<Categorie>Commerce</Categorie>
 			<Auteur>
 				<IdAuteur>FR004DM</IdAuteur>
 				<Nom>Dupond</Nom>
@@ -181,7 +183,7 @@
 	<Theme>
 		<Libelle>Politique</Libelle>
 		
-		<Ouvrage exclu="true" dispo="true">
+		<Ouvrage Emprunte="true" Disponible="true">
 			<Reference>0001POL</Reference>
 			<Titre>Après la présidence</Titre>
 			<Edition>1</Edition>
@@ -189,7 +191,7 @@
 			<ISBN>001567</ISBN>
 			<NbreExemplaires>100</NbreExemplaires>
 			<Commentaires>La retraite politique</Commentaires>
-			
+			<Categorie>Politique</Categorie>
 			<Auteur>
 				<IdAuteur>FR004HF</IdAuteur>
 				<Nom>Hollande</Nom>
@@ -203,7 +205,7 @@
 			
 		</Ouvrage>
 		
-		<Ouvrage exclu="false" dispo="true">
+		<Ouvrage Emprunte="false" Disponible="true">
 			<Reference>0002POL</Reference>
 			<Titre>Assemblée Générale</Titre>
 			<Edition>8</Edition>
@@ -211,7 +213,7 @@
 			<ISBN>001569</ISBN>
 			<NbreExemplaires>500</NbreExemplaires>
 			<Commentaires>Fonctionnement</Commentaires>
-			
+			<Categorie>Politique</Categorie>
 			<Auteur>
 				<IdAuteur>FR005RF</IdAuteur>
 				<Nom>De Rugy</Nom>
@@ -236,7 +238,7 @@
 	<Theme>
 		<Libelle>Art</Libelle>
 		
-		<Ouvrage exclu="false" dispo="true">
+		<Ouvrage Emprunte="false" Disponible="true">
 			<Reference>0001ART</Reference>
 			<Titre>Mona Lisa</Titre>
 			<Edition>1</Edition>
@@ -244,7 +246,7 @@
 			<ISBN>071234</ISBN>
 			<NbreExemplaires>500</NbreExemplaires>
 			<Commentaires>Peinture</Commentaires>
-			
+			<Categorie>Peinture</Categorie>
 			<Auteur>
 				<IdAuteur>FR006VL</IdAuteur>
 				<Nom>De Vinci</Nom>
@@ -272,5 +274,8 @@
 		
 		
 	</Theme>
-	
+</Ouvrages>
+
+<Usagers>
+</Usagers>	
 </Bibliotheque>

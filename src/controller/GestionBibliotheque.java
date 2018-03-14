@@ -55,11 +55,11 @@ public class GestionBibliotheque {
 
 	public void emprunter(Ouvrage ouv) {
 		
-		if (ouv.getEmprunte == false ) {
+		if (ouv.getEmprunte() == false ) {
 			ouv.setEmprunte(true);
 			System.out.println(" emprunter l'ouvrage !");
 		} else
-			System.out.println("L'ouvrage est déjà emprunté !");
+			System.out.println("L'ouvrage est dÃ©jÃ  empruntÃ© !");
 	}}
 	/*public retourOuvrage( ){
 	     
