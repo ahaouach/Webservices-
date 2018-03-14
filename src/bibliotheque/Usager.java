@@ -65,7 +65,7 @@ public class Usager {
 	}
 
 	public void setListEmpruntUser(HashMap<String, Ouvrage> listEmpruntUser) {
-		this.listEmpruntUser = listEmpruntUser;
+		Usager.listEmpruntUser = listEmpruntUser;
 	}
 
 	public boolean equals(Usager o) {
