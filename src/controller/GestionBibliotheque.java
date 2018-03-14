@@ -4,31 +4,27 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import bibliotheque.Ouvrage;
-import bibliotheque.Ouvrages;
-import bibliotheque.Usagers;
+//import bibliotheque.Ouvrages;
+import bibliotheque.Usager;
 
-
-@SuppressWarnings("unused")
 public class GestionBibliotheque {
-	
-    private HashMap<String, Ouvrage> listemprunt= new HashMap<>();
-	private HashMap<String, Usagers> listUsagers = new HashMap<>();
-	
 
-	public GestionBibliotheque(HashMap<String, Usagers> listUsagers) {
+	private HashMap<String, Usager> listUsagers = new HashMap<>();
+
+	public GestionBibliotheque(HashMap<String, Usager> listUsagers) {
 		super();
 		this.listUsagers = listUsagers;
 	}
 
-	public HashMap<String, Usagers> getListUsagers() {
+	public HashMap<String, Usager> getListUsagers() {
 		return listUsagers;
 	}
 
-	public void setListUsagers(HashMap<String, Usagers> listUsagers) {
+	public void setListUsagers(HashMap<String, Usager> listUsagers) {
 		this.listUsagers = listUsagers;
 	}
 
-	public void AjouterUsagers(Usagers usager) {
+	public void AjouterUsagers(Usager usager) {
 		listUsagers.put(usager.getIdUsager(), usager);
 
 	}
@@ -37,14 +33,14 @@ public class GestionBibliotheque {
 		listUsagers.remove(idusager);
 	}
 
-	public Usagers RechercherUserParID(String iduser) {
+	public Usager RechercherUserParID(String iduser) {
 		return listUsagers.get(iduser);
 
 	}
 
-	public ArrayList<Usagers> RechercherUserParNom(String nomUser) {
-		ArrayList<Usagers> users = new ArrayList<>();
-		for (Usagers A : listUsagers.values()) {
+	public ArrayList<Usager> RechercherUserParNom(String nomUser) {
+		ArrayList<Usager> users = new ArrayList<>();
+		for (Usager A : listUsagers.values()) {
 			if (A.getNom().equals(nomUser)) {
 				users.add(A);
 			}
@@ -54,25 +50,19 @@ public class GestionBibliotheque {
 	}
 
 	public void emprunter(Ouvrage ouv) {
-		
-		if (ouv.getEmprunte() == false ) {
+
+		if (ouv.getEmprunte() == false) {
 			ouv.setEmprunte(true);
 			System.out.println(" emprunter l'ouvrage !");
 		} else
 			System.out.println("L'ouvrage est d√©j√† emprunt√© !");
-	}}
-	/*public retourOuvrage( ){
-	     
-	    while(.hasNext()){
-	    if(){
-	    suppLivre(livre);
-	    }
-	     
-	    }
-	     
-	    else{
-	    System.out.println("Le lecteur n'a rien emprunter !");
-	    }
-	     
-	    }
-}*/
+	}
+
+	public void retourOuvrage(Ouvrage ouv) {
+		if (ouv.getEmprunte() == true) {
+			ouv.setEmprunte(false);
+			System.out.println(" l'ouvrage est retournÈ !");
+		} else
+			System.out.println(" l'ouvrage est toujours empruntÈ !");
+	}
+}

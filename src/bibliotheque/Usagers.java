@@ -1,4 +1,4 @@
-package bibliotheque;
+/*package bibliotheque;
 
 import java.util.HashMap;
 
@@ -19,4 +19,4 @@ public class Usagers {
 		this.listUsagers = listUsagers;
 	}
 
-}
+}*/

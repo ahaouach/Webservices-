@@ -6,7 +6,7 @@ import java.util.HashMap;
 import bibliotheque.Auteur;
 import bibliotheque.Editeur;
 import bibliotheque.Ouvrage;
-import bibliotheque.Usagers;
+//import bibliotheque.Usager;
 
 public class GestionOuvrage {
 	private HashMap<String, Auteur> listAuteurs = new HashMap<>();
