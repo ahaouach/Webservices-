@@ -37,7 +37,7 @@ public class BibliothequeApplication {
 		//controller.GestionSauvegarde.sauvegarde(o2, "Science");
 		
 		bibliotheque.Usager u1 = new Usager("4", "27/05/1993", "Bourne", "Jason", "3 rue Lyautey, 33600, Pessac, France", "json.bourne@email.com");
-		controller.GestionSauvegarde.sauvegarde(u1);
+		//controller.GestionSauvegarde.sauvegarde(u1);
 		
 		controller.GestionSauvegarde.chargement();
 		
