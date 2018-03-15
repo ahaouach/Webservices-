@@ -14,7 +14,7 @@ public class Ouvrage {
 	private boolean Emprunte = false;
 	// public boolean getEmprunte;
 
-	public Ouvrage(String reference,Editeur editeur, String titre,Auteur auteur,String edition, String iSBN, int nbrExemplaire, String commentaires, boolean disponible, String categorie,
+	public Ouvrage(String reference,Editeur editeur, String titre,String auteur,String edition, String iSBN, int nbrExemplaire, String commentaires, boolean disponible, String categorie,
 			boolean emprunte) {
 		super();
 		Reference = reference;

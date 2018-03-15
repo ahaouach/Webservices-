@@ -1,4 +1,4 @@
-package bibliotheque;
+/*package bibliotheque;
 
 
 public class Auteur {
@@ -67,4 +67,4 @@ public class Auteur {
 		return result;
 	}
 
-}
+}  */
