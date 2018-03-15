@@ -2,7 +2,7 @@
 <!ELEMENT Bibliotheque (Ouvrages, Usagers)>
 
 <!ELEMENT Usagers (Usager+)>
-<!ELEMENT Usager (IdUsager?, NomUsager, PrenomUsager, Datenaiss, Adresse)>
+<!ELEMENT Usager (IdUsager?, NomUsager, PrenomUsager, Datenaiss, Adresse, Email)>
 
 <!ELEMENT Ouvrages (Theme+)>
 <!ELEMENT Theme (Ouvrage+)>
@@ -33,6 +33,7 @@
 <!ELEMENT PrenomUsager (#PCDATA)>
 <!ELEMENT Datenaiss (#PCDATA)>
 <!ELEMENT Adresse (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
 
 <!ATTLIST Theme Libelle CDATA #IMPLIED>
 <!ATTLIST Ouvrage Disponible (true | false) #REQUIRED>

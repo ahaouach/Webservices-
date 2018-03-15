@@ -1,6 +1,5 @@
 package bibliotheque;
 
-
 public class Ouvrage {
 	private String Reference;
 	private Auteur Auteur;
@@ -11,6 +10,7 @@ public class Ouvrage {
 	private String ISBN;
 	private int NbrExemplaire;
 	private String Commentaires;
+
 	private boolean Disponible;
 	private String Categorie; 
 	private boolean Emprunte = false;
@@ -18,6 +18,7 @@ public class Ouvrage {
 
 	public Ouvrage(String reference, bibliotheque.Auteur auteur, bibliotheque.Editeur editeur, int annee, String titre,
 			String edition, String iSBN, int nbrExemplaire, String commentaires, boolean disponible, String categorie,
+
 			boolean emprunte) {
 		super();
 		Reference = reference;
@@ -34,8 +35,6 @@ public class Ouvrage {
 		Emprunte = emprunte;
 	}
 
-	
-	
 
 	public String getReference() {
 		return Reference;
@@ -200,6 +199,7 @@ public class Ouvrage {
 
 	public void setEmprunte(boolean emprunte) {
 		Emprunte = emprunte;
+
 	}
 
 
@@ -209,8 +209,7 @@ public class Ouvrage {
 	public String toString() {
 		return "Ouvrage [Reference=" + Reference + ", Auteur=" + Auteur + ", Editeur=" + Editeur + ", Titre=" + Titre
 				+ ", Edition=" + Edition + ", ISBN=" + ISBN + ", NbrExemplaire=" + NbrExemplaire + ", Commentaires="
-				+ Commentaires + ", Disponible=" + Disponible + ", Categorie=" + Categorie + ", Emprunte=" + Emprunte
-				+ "]";
+				+ Commentaires + ", Disponible=" + Disponible + ", Categorie=" + Categorie + "]";
 	}
 
 	@Override
@@ -219,12 +218,10 @@ public class Ouvrage {
 		int result = 1;
 		result = prime * result + Annee;
 		result = prime * result + ((Auteur == null) ? 0 : Auteur.hashCode());
-		result = prime * result + ((Categorie == null) ? 0 : Categorie.hashCode());
 		result = prime * result + ((Commentaires == null) ? 0 : Commentaires.hashCode());
 		result = prime * result + (Disponible ? 1231 : 1237);
 		result = prime * result + ((Editeur == null) ? 0 : Editeur.hashCode());
 		result = prime * result + ((Edition == null) ? 0 : Edition.hashCode());
-		result = prime * result + (Emprunte ? 1231 : 1237);
 		result = prime * result + ((ISBN == null) ? 0 : ISBN.hashCode());
 		result = prime * result + NbrExemplaire;
 		result = prime * result + ((Reference == null) ? 0 : Reference.hashCode());

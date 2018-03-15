@@ -6,6 +6,7 @@ import java.io.IOException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
@@ -14,6 +15,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -21,7 +23,9 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import bibliotheque.Ouvrage;
-import bibliotheque.Usagers;
+import bibliotheque.Auteur;
+import bibliotheque.Usager;
+
 
 public abstract class GestionSauvegarde {
 
@@ -283,7 +287,7 @@ public abstract class GestionSauvegarde {
 
 	}
 
-	public static void sauvegarde(Usagers nouvUsager) {
+	public static void sauvegarde(Usager nouvUsager) {
 		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 
 		try {
@@ -312,7 +316,7 @@ public abstract class GestionSauvegarde {
 					final Element usager = (Element) document.createElement("Usager");
 					
 					final Element id = (Element) document.createElement("IdUsager");
-					id.appendChild(document.createTextNode(nouvUsager.getIdUsager()));
+					id.appendChild(document.createTextNode(nouvUsager.getId()));
 
 					final Element nom = (Element) document.createElement("NomUsager");
 					nom.appendChild(document.createTextNode(nouvUsager.getNom()));
@@ -324,7 +328,10 @@ public abstract class GestionSauvegarde {
 					dateNaiss.appendChild(document.createTextNode(nouvUsager.getDatenaiss()));
 
 					final Element adr = (Element) document.createElement("Adresse");
-					adr.appendChild(document.createTextNode(nouvUsager.getAddress()));
+					adr.appendChild(document.createTextNode(nouvUsager.getAdresse()));
+					
+					final Element mail = (Element) document.createElement("Email");
+					mail.appendChild(document.createTextNode(nouvUsager.getEmail()));
 
 					racineNoeuds.item(i).appendChild(usager);
 
@@ -333,6 +340,7 @@ public abstract class GestionSauvegarde {
 					usager.appendChild(prenom);
 					usager.appendChild(dateNaiss);
 					usager.appendChild(adr);
+					usager.appendChild(mail);
 					
 
 					// Sauvegarde
@@ -376,6 +384,6 @@ public abstract class GestionSauvegarde {
 		catch (TransformerException e) {
 			e.printStackTrace();
 		}
-	}
 
+	}
 }

@@ -266,15 +266,15 @@
 
     </Theme>
 </Ouvrages>
-
 <Usagers>
 
 	<Usager>
 		<IdUsager>1</IdUsager>
-		<NomUsager>DOE</NomUsager>
+		<NomUsager>Doe</NomUsager>
 		<PrenomUsager>John</PrenomUsager>
 		<Datenaiss>01/01/1990</Datenaiss>
 		<Adresse>15 rue de Grou, 33400, Talence, France </Adresse>
+		<Email>john.doe@email.com</Email>
     </Usager>
 	
 	<Usager>
@@ -283,6 +283,7 @@
 		<PrenomUsager>Marc</PrenomUsager>
 		<Datenaiss>10/05/1989</Datenaiss>
 		<Adresse>24 cours de la Marne, 33300, Bordeaux, France </Adresse>
+		<Email>marc.pointet@email.com</Email>
     </Usager>
 	
 	<Usager>
@@ -291,8 +292,8 @@
 		<PrenomUsager>Bredy</PrenomUsager>
 		<Datenaiss>14/10/1992</Datenaiss>
 		<Adresse>152 cours St Louis, 33300, Bordeaux, France </Adresse>
+		<Email>bredy.anne@email.com</Email>
     </Usager>
-	
 
   </Usagers>	
 </Bibliotheque>

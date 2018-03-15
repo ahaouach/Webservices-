@@ -1,76 +1,47 @@
 package bibliotheque;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Usagers {
-	private String idUsager;
-	private String datenaiss;
-	private String nom;
-	private String prenom;
-	private String address;
 
-	public Usagers(String idUsager, String datenaiss, String nom, String prenom, String address) {
+	private HashMap<String, Usager> listUsagers = new HashMap<>();
+
+	public Usagers(HashMap<String, Usager> listUsagers) {
 		super();
-		this.idUsager = idUsager;
-		this.datenaiss = datenaiss;
-		this.nom = nom;
-		this.prenom = prenom;
-		this.address = address;
+		this.listUsagers = listUsagers;
 	}
 
-	public String getIdUsager() {
-		return idUsager;
+	public HashMap<String, Usager> getListUsagers() {
+		return listUsagers;
 	}
 
-	public void setIdUsager(String idUsager) {
-		this.idUsager = idUsager;
+	public void setListUsagers(HashMap<String, Usager> listUsagers) {
+		this.listUsagers = listUsagers;
 	}
 
-	public String getDatenaiss() {
-		return datenaiss;
+	public void AjouterUsagers(Usager usager) {
+		listUsagers.put(usager.getId(), usager);
+
 	}
 
-	public void setDatenaiss(String datenaiss) {
-		this.datenaiss = datenaiss;
+	public void SupprimerUsagers(String idusager) {
+		listUsagers.remove(idusager);
 	}
 
-	public String getNom() {
-		return nom;
+	public Usager RechercherUserParID(String iduser) {
+		return listUsagers.get(iduser);
+
 	}
 
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-
-	public String getPrenom() {
-		return prenom;
-	}
-
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public boolean equals(Usagers o) {
-		if (!(o instanceof Usagers)) {
-			return false;
+	public ArrayList<Usager> RechercherUserParNom(String nomUser) {
+		ArrayList<Usager> users = new ArrayList<>();
+		for (Usager A : listUsagers.values()) {
+			if (A.getNom().equals(nomUser)) {
+				users.add(A);
+			}
 		}
-		Usagers user = (Usagers) o;
-		return getIdUsager().equals(user.idUsager);
+		return users;
 
 	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((idUsager == null) ? 0 : idUsager.hashCode());
-		return result;
-	}
-
 }

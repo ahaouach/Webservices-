@@ -64,7 +64,7 @@
 				</table>
 				
 				<!--  
-				<h2> LISTE DES EDITEURS </h2>
+				<h2> list des editeur  </h2>
 				
 				<table border="1" cellspacing="0" cellpadding="3">
 					<th>N° | Maison d'édition</th>
