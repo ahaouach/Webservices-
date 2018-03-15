@@ -1,6 +1,5 @@
 package bibliotheque;
 
-
 public class Auteur {
 	private String idAuteur;
 	private String nomAuteur;
@@ -67,4 +66,6 @@ public class Auteur {
 		return result;
 	}
 
+
 } 
+

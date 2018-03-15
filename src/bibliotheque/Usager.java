@@ -13,6 +13,7 @@ public class Usager {
 	public static HashMap<String, Ouvrage> listEmpruntUser = new HashMap<>(); // liste des emprunt de chaque user
 
 	public Usager(String idUsager, String datenaiss, String nom, String prenom, String adresse, String email) {
+
 		super();
 		this.id = idUsager;
 		this.datenaiss = datenaiss;
@@ -66,6 +67,7 @@ public class Usager {
 	public String getAdresse() {
 		return adresse;
 	}
+
 
 	public void setAdresse(String adresse) {
 		this.adresse = adresse;

@@ -11,6 +11,7 @@ public class Ouvrage {
 	private int NbrExemplaire;
 	private String Commentaires;
 
+
 	private boolean Disponible;
 	private String Categorie; 
 	private boolean Emprunte = false;
@@ -18,7 +19,6 @@ public class Ouvrage {
 
 	public Ouvrage(String reference, bibliotheque.Auteur auteur, bibliotheque.Editeur editeur, int annee, String titre,
 			String edition, String iSBN, int nbrExemplaire, String commentaires, boolean disponible, String categorie,
-
 			boolean emprunte) {
 		super();
 		Reference = reference;
@@ -34,7 +34,6 @@ public class Ouvrage {
 		Categorie = categorie;
 		Emprunte = emprunte;
 	}
-
 
 	public String getReference() {
 		return Reference;
@@ -199,7 +198,6 @@ public class Ouvrage {
 
 	public void setEmprunte(boolean emprunte) {
 		Emprunte = emprunte;
-
 	}
 
 
