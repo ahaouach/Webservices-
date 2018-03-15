@@ -263,7 +263,6 @@
 			</Editeur>
 			
 		</Ouvrage>
-<<<<<<< HEAD
 
     </Theme>
 </Ouvrages>
@@ -298,17 +297,3 @@
 
   </Usagers>	
 </Bibliotheque>
-=======
-		
-		
-	</Theme>
-</Ouvrages>
-<Usagers>
-<IdUsager></IdUsager>
-<Datenaiss></Datenaiss>
-<Nom></Nom>
-<Prenom></Prenom>
-<Adresse></Adresse>
-</Usagers>	
-</Bibliotheque>
->>>>>>> eadbe2ad93d55704412671b7319339c1ef584bc3
