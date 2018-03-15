@@ -1,5 +1,6 @@
-/*package bibliotheque;
+package bibliotheque;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Usagers {
@@ -19,4 +20,28 @@ public class Usagers {
 		this.listUsagers = listUsagers;
 	}
 
-}*/
+	public void AjouterUsagers(Usager usager) {
+		listUsagers.put(usager.getId(), usager);
+
+	}
+
+	public void SupprimerUsagers(String idusager) {
+		listUsagers.remove(idusager);
+	}
+
+	public Usager RechercherUserParID(String iduser) {
+		return listUsagers.get(iduser);
+
+	}
+
+	public ArrayList<Usager> RechercherUserParNom(String nomUser) {
+		ArrayList<Usager> users = new ArrayList<>();
+		for (Usager A : listUsagers.values()) {
+			if (A.getNom().equals(nomUser)) {
+				users.add(A);
+			}
+		}
+		return users;
+
+	}
+}

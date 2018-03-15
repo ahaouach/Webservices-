@@ -3,29 +3,53 @@ package bibliotheque;
 import java.util.HashMap;
 
 public class Usager {
-	private String idUsager;
+	private String id;
 	private String datenaiss;
 	private String nom;
 	private String prenom;
-	private String address;
+	private String adresse;
+	private String email;
+	private String password;
+	private String confirmation;
+
 	public static HashMap<String, Ouvrage> listEmpruntUser = new HashMap<>(); // liste des emprunt de chaque user
 
-	public Usager(String idUsager, String datenaiss, String nom, String prenom, String address) {
+	public Usager(String idUsager, String datenaiss, String nom, String prenom, String adresse, String email,
+			String password, String confirmation) {
 		super();
-		this.idUsager = idUsager;
+		this.id = idUsager;
 		this.datenaiss = datenaiss;
 		this.nom = nom;
 		this.prenom = prenom;
-		this.address = address;
+		this.adresse = adresse;
+		this.email = email;
+		this.password = password;
+		this.confirmation = confirmation;
 
 	}
 
-	public String getIdUsager() {
-		return idUsager;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setIdUsager(String idUsager) {
-		this.idUsager = idUsager;
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getDatenaiss() {
@@ -52,12 +76,12 @@ public class Usager {
 		this.prenom = prenom;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getAdresse() {
+		return adresse;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setAddress(String adresse) {
+		this.adresse = adresse;
 	}
 
 	public HashMap<String, Ouvrage> getListEmpruntUser() {
@@ -73,7 +97,7 @@ public class Usager {
 			return false;
 		}
 		Usager user = (Usager) o;
-		return getIdUsager().equals(user.idUsager);
+		return getId().equals(user.id);
 
 	}
 
@@ -81,8 +105,16 @@ public class Usager {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((idUsager == null) ? 0 : idUsager.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
+	}
+
+	public String getConfirmation() {
+		return confirmation;
+	}
+
+	public void setConfirmation(String confirmation) {
+		this.confirmation = confirmation;
 	}
 
 }

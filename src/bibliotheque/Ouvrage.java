@@ -10,16 +10,11 @@ public class Ouvrage {
 	private int NbrExemplaire;
 	private String Commentaires;
 	private Boolean Disponible;
-	private String Categorie; 
-	private boolean emprunte = false	;
-	public boolean getEmprunte;
-	
-	
+	private String Categorie;
+	private boolean Emprunte = false;
+	// public boolean getEmprunte;
 
-	
-
-	public Ouvrage(String reference, bibliotheque.Auteur auteur, bibliotheque.Editeur editeur, String titre,
-			String edition, String iSBN, int nbrExemplaire, String commentaires, Boolean disponible, String categorie,
+	public Ouvrage(String reference,Editeur editeur, String titre,Auteur auteur,String edition, String iSBN, int nbrExemplaire, String commentaires, boolean disponible, String categorie,
 			boolean emprunte) {
 		super();
 		Reference = reference;
@@ -32,10 +27,9 @@ public class Ouvrage {
 		Commentaires = commentaires;
 		Disponible = disponible;
 		Categorie = categorie;
-		this.emprunte = emprunte;
+		Emprunte = emprunte;
 	}
 
-	
 	public String getReference() {
 		return Reference;
 	}

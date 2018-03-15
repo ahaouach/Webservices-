@@ -1,10 +1,6 @@
 package bibliotheque;
 
-/**
- * la classe Auteur permet de creer l'objet Auteur avec ses attributs
- *
- * 
- */
+
 public class Auteur {
 	private String idAuteur;
 	private String nomAuteur;
