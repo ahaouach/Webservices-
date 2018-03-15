@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-stylesheet type="text/xsl" href="Bibliotheque.xsl"?>
-<!DOCTYPE Bibliotheque SYSTEM "Bibliotheque.dtd">
-
-<Bibliotheque>
+<?xml-stylesheet type="text/xsl" href="Bibliotheque.xsl"?><Bibliotheque>
 
 <Ouvrages>
-	<Theme>
-		<Libelle>Sciences</Libelle>
+	<Theme Libelle="Science">
 		
-		<Ouvrage Emprunte="false" Disponible="true">
+		<Ouvrage Disponible="true" Emprunte="false">
 			<Reference>0001SCI</Reference>
 			<Titre>Introduction au XML</Titre>
 			<Edition>2</Edition>
@@ -30,7 +26,7 @@
 			
 		</Ouvrage>
 		
-		<Ouvrage Emprunte="false" Disponible="false">
+		<Ouvrage Disponible="false" Emprunte="false">
 			<Reference>0002SCI</Reference>
 			<Titre>Web Services</Titre>
 			<Edition>5</Edition>
@@ -51,13 +47,12 @@
 			</Editeur>
 			
 		</Ouvrage>
+
+    </Theme>
 	
-	</Theme>
-	
-	<Theme>
-		<Libelle>Litterature</Libelle>
+	<Theme Libelle="Litterature">
 		
-		<Ouvrage Emprunte="true" Disponible="false">
+		<Ouvrage Disponible="false" Emprunte="true">
 			<Reference>0001LIT</Reference>
 			<Titre>Le Père Goriot</Titre>
 			<Edition>2</Edition>
@@ -79,7 +74,7 @@
 			
 		</Ouvrage>
 		
-		<Ouvrage Emprunte="true" Disponible="true">
+		<Ouvrage Disponible="true" Emprunte="true">
 			<Reference>0002LIT</Reference>
 			<Titre>Twilight</Titre>
 			<Edition>3</Edition>
@@ -107,7 +102,7 @@
 			
 		</Ouvrage>
 		
-		<Ouvrage Emprunte="false" Disponible="true">
+		<Ouvrage Disponible="true" Emprunte="false">
 			<Reference>0003LIT</Reference>
 			<Titre>Les misérables</Titre>
 			<Edition>1</Edition>
@@ -131,10 +126,9 @@
 		
 	</Theme>
 	
-	<Theme>
-		<Libelle>Economie</Libelle>
+	<Theme Libelle="Economie">
 		
-		<Ouvrage Emprunte="false" Disponible="true">
+		<Ouvrage Disponible="true" Emprunte="false">
 			<Reference>0001ECO</Reference>
 			<Titre>Economie Générale</Titre>
 			<Edition>5</Edition>
@@ -156,7 +150,7 @@
 			
 		</Ouvrage>
 		
-		<Ouvrage Emprunte="false" Disponible="true">
+		<Ouvrage Disponible="true" Emprunte="false">
 			<Reference>0002ECO</Reference>
 			<Titre>Offre et Demande</Titre>
 			<Edition>4</Edition>
@@ -180,10 +174,9 @@
 		
 	</Theme>
 	
-	<Theme>
-		<Libelle>Politique</Libelle>
+	<Theme Libelle="Politique">
 		
-		<Ouvrage Emprunte="true" Disponible="true">
+		<Ouvrage Disponible="true" Emprunte="true">
 			<Reference>0001POL</Reference>
 			<Titre>Après la présidence</Titre>
 			<Edition>1</Edition>
@@ -205,7 +198,7 @@
 			
 		</Ouvrage>
 		
-		<Ouvrage Emprunte="false" Disponible="true">
+		<Ouvrage Disponible="true" Emprunte="false">
 			<Reference>0002POL</Reference>
 			<Titre>Assemblée Générale</Titre>
 			<Edition>8</Edition>
@@ -235,10 +228,9 @@
 		
 	</Theme>
 	
-	<Theme>
-		<Libelle>Art</Libelle>
+	<Theme Libelle="Art">
 		
-		<Ouvrage Emprunte="false" Disponible="true">
+		<Ouvrage Disponible="true" Emprunte="false">
 			<Reference>0001ART</Reference>
 			<Titre>Mona Lisa</Titre>
 			<Edition>1</Edition>
@@ -271,11 +263,36 @@
 			</Editeur>
 			
 		</Ouvrage>
-		
-		
-	</Theme>
+
+    </Theme>
 </Ouvrages>
 
 <Usagers>
-</Usagers>	
+
+	<Usager>
+		<IdUsager>1</IdUsager>
+		<NomUsager>DOE</NomUsager>
+		<PrenomUsager>John</PrenomUsager>
+		<Datenaiss>01/01/1990</Datenaiss>
+		<Adresse>15 rue de Grou, 33400, Talence, France </Adresse>
+    </Usager>
+	
+	<Usager>
+		<IdUsager>2</IdUsager>
+		<NomUsager>Pointet</NomUsager>
+		<PrenomUsager>Marc</PrenomUsager>
+		<Datenaiss>10/05/1989</Datenaiss>
+		<Adresse>24 cours de la Marne, 33300, Bordeaux, France </Adresse>
+    </Usager>
+	
+	<Usager>
+		<IdUsager>3</IdUsager>
+		<NomUsager>Anne</NomUsager>
+		<PrenomUsager>Bredy</PrenomUsager>
+		<Datenaiss>14/10/1992</Datenaiss>
+		<Adresse>152 cours St Louis, 33300, Bordeaux, France </Adresse>
+    </Usager>
+	
+
+  </Usagers>	
 </Bibliotheque>

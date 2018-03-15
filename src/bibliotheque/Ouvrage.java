@@ -1,30 +1,29 @@
 package bibliotheque;
 
+
 public class Ouvrage {
 	private String Reference;
 	private Auteur Auteur;
 	private Editeur Editeur;
+	private int Annee;
 	private String Titre;
 	private String Edition;
 	private String ISBN;
 	private int NbrExemplaire;
 	private String Commentaires;
-	private Boolean Disponible;
+	private boolean Disponible;
 	private String Categorie; 
 	private boolean Emprunte = false;
-	
-	
-	
 
-	
 
-	public Ouvrage(String reference, bibliotheque.Auteur auteur, bibliotheque.Editeur editeur, String titre,
+	public Ouvrage(String reference, bibliotheque.Auteur auteur, bibliotheque.Editeur editeur, int annee, String titre,
 			String edition, String iSBN, int nbrExemplaire, String commentaires, boolean disponible, String categorie,
 			boolean emprunte) {
 		super();
 		Reference = reference;
 		Auteur = auteur;
 		Editeur = editeur;
+		Annee = annee;
 		Titre = titre;
 		Edition = edition;
 		ISBN = iSBN;
@@ -36,105 +35,175 @@ public class Ouvrage {
 	}
 
 	
+	
+
 	public String getReference() {
 		return Reference;
 	}
 
-	public void setReferance(String reference) {
-		Reference = reference;
-	}
 
-	public Auteur getAuteur() {
-		return Auteur;
-	}
 
-	public void setAuteur(Auteur auteur) {
-		Auteur = auteur;
-	}
-
-	public Editeur getEditeur() {
-		return Editeur;
-	}
-
-	public void setEditeur(Editeur editeur) {
-		Editeur = editeur;
-	}
-
-	public String getTitre() {
-		return Titre;
-	}
-
-	public void setTitre(String titre) {
-		Titre = titre;
-	}
-
-	public String getEdition() {
-		return Edition;
-	}
-
-	public void setEdition(String edition) {
-		Edition = edition;
-	}
-
-	public String getISBN() {
-		return ISBN;
-	}
-
-	public void setISBN(String iSBN) {
-		ISBN = iSBN;
-	}
-
-	public int getNbr() {
-		return NbrExemplaire;
-	}
-
-	public void setNbr(int nbr) {
-		NbrExemplaire = nbr;
-	}
-
-	public String getCommentaires() {
-		return Commentaires;
-	}
-
-	public void setCommentaires(String commentaires) {
-		Commentaires = commentaires;
-	}
-
-	public int getNbrExemplaire() {
-		return NbrExemplaire;
-	}
-
-	public void setNbrExemplaire(int nbrExemplaire) {
-		NbrExemplaire = nbrExemplaire;
-	}
 
 	public void setReference(String reference) {
 		Reference = reference;
 	}
 
-	public Boolean getDisponible() {
+
+
+
+	public Auteur getAuteur() {
+		return Auteur;
+	}
+
+
+
+
+	public void setAuteur(Auteur auteur) {
+		Auteur = auteur;
+	}
+
+
+
+
+	public Editeur getEditeur() {
+		return Editeur;
+	}
+
+
+
+
+	public void setEditeur(Editeur editeur) {
+		Editeur = editeur;
+	}
+
+
+
+
+	public int getAnnee() {
+		return Annee;
+	}
+
+
+
+
+	public void setAnnee(int annee) {
+		Annee = annee;
+	}
+
+
+
+
+	public String getTitre() {
+		return Titre;
+	}
+
+
+
+
+	public void setTitre(String titre) {
+		Titre = titre;
+	}
+
+
+
+
+	public String getEdition() {
+		return Edition;
+	}
+
+
+
+
+	public void setEdition(String edition) {
+		Edition = edition;
+	}
+
+
+
+
+	public String getISBN() {
+		return ISBN;
+	}
+
+
+
+
+	public void setISBN(String iSBN) {
+		ISBN = iSBN;
+	}
+
+
+
+
+	public int getNbrExemplaire() {
+		return NbrExemplaire;
+	}
+
+
+
+
+	public void setNbrExemplaire(int nbrExemplaire) {
+		NbrExemplaire = nbrExemplaire;
+	}
+
+
+
+
+	public String getCommentaires() {
+		return Commentaires;
+	}
+
+
+
+
+	public void setCommentaires(String commentaires) {
+		Commentaires = commentaires;
+	}
+
+
+
+
+	public boolean getDisponible() {
 		return Disponible;
 	}
 
-	public void setDisponible(Boolean disponible) {
+
+
+
+	public void setDisponible(boolean disponible) {
 		Disponible = disponible;
 	}
+
+
+
 
 	public String getCategorie() {
 		return Categorie;
 	}
 
+
+
+
 	public void setCategorie(String categorie) {
 		Categorie = categorie;
 	}
+
+
+
 
 	public boolean getEmprunte() {
 		return Emprunte;
 	}
 
+
+
+
 	public void setEmprunte(boolean emprunte) {
-		this.Emprunte = emprunte;
+		Emprunte = emprunte;
 	}
+
+
+
 
 	@Override
 	public String toString() {
@@ -148,10 +217,11 @@ public class Ouvrage {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + Annee;
 		result = prime * result + ((Auteur == null) ? 0 : Auteur.hashCode());
 		result = prime * result + ((Categorie == null) ? 0 : Categorie.hashCode());
 		result = prime * result + ((Commentaires == null) ? 0 : Commentaires.hashCode());
-		result = prime * result + ((Disponible == null) ? 0 : Disponible.hashCode());
+		result = prime * result + (Disponible ? 1231 : 1237);
 		result = prime * result + ((Editeur == null) ? 0 : Editeur.hashCode());
 		result = prime * result + ((Edition == null) ? 0 : Edition.hashCode());
 		result = prime * result + (Emprunte ? 1231 : 1237);
