@@ -51,9 +51,7 @@
 								<xsl:value-of select="Categorie"/>
 							</td>
 							<td>
-								<xsl:for-each select="Auteur">
-									N° <xsl:value-of select="IdAuteur"/> | <xsl:value-of select="Nom"/>_<xsl:value-of select="Prenom"/> <br/>
-								</xsl:for-each>
+								<xsl:value-of select="Auteur"/>
 							</td>
 							<td>
 								<xsl:value-of select="Editeur"/>

@@ -44,4 +44,10 @@ public class Usagers {
 		return users;
 
 	}
+	
+	public void afficher() {
+		System.out.println("\n======== LISTE USAGERS ========");
+		listUsagers.forEach((k,v)->System.out.println(v.toString()));
+		System.out.println("\n================================");
+	}
 }

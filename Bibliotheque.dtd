@@ -8,8 +8,7 @@
 <!ELEMENT Theme (Ouvrage+)>
 <!ELEMENT Ouvrage (Reference?, Titre, Edition, Annee, 
 					ISBN, NbreExemplaires, Commentaires,Categorie, Auteur+, Editeur) >				
-<!ELEMENT Auteur (IdAuteur?, Nom, Prenom)>
-<!ELEMENT Editeur (IdEditeur?, MaisonDedition)>	
+
 
 <!ELEMENT Reference (#PCDATA)>
 <!ELEMENT Titre (#PCDATA)>
@@ -19,6 +18,8 @@
 <!ELEMENT NbreExemplaires (#PCDATA)>
 <!ELEMENT Commentaires (#PCDATA)>
 <!ELEMENT Categorie (#PCDATA)>
+<!ELEMENT Auteur (#PCDATA)>
+<!ELEMENT Editeur (#PCDATA)>	
 
 
 <!ELEMENT IdAuteur (#PCDATA)>

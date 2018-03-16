@@ -13,16 +13,8 @@
 			<NbreExemplaires>30</NbreExemplaires>
 			<Commentaires>Techno du web</Commentaires>
 			<Categorie>Informatique</Categorie>
-			<Auteur>
-				<IdAuteur>UB001JB</IdAuteur>
-				<Nom>Jenny</Nom>
-				<Prenom>Benois-Pineau</Prenom>	
-			</Auteur>
-	
-			<Editeur>
-				<IdEditeur>1</IdEditeur>
-				<MaisonDedition>Hachette</MaisonDedition>
-			</Editeur>
+			<Auteur>Jenny Benois-Pineau</Auteur>
+			<Editeur>Hachette</Editeur>
 			
 		</Ouvrage>
 		
@@ -35,16 +27,8 @@
 			<NbreExemplaires>50</NbreExemplaires>
 			<Commentaires>Techno du web</Commentaires>
 			<Categorie>Informatique</Categorie>
-			<Auteur>
-				<IdAuteur>UB002LG</IdAuteur>
-				<Nom>Graciannette</Nom>
-				<Prenom>Luc</Prenom>	
-			</Auteur>
-	
-			<Editeur>
-				<IdEditeur>2</IdEditeur>
-				<MaisonDedition>EDITIS</MaisonDedition>
-			</Editeur>
+			<Auteur>Graciannette Luc</Auteur>
+			<Editeur>EDITIS</Editeur>
 			
 		</Ouvrage>
 
@@ -61,16 +45,8 @@
 			<NbreExemplaires>100</NbreExemplaires>
 			<Commentaires>Roman classique</Commentaires>
 			<Categorie>Francaise</Categorie>
-			<Auteur>
-				<IdAuteur>FR001BH</IdAuteur>
-				<Nom>Balzac</Nom>
-				<Prenom>Honore</Prenom>	
-			</Auteur>
-	
-			<Editeur>
-				<IdEditeur>1</IdEditeur>
-				<MaisonDedition>Hachette</MaisonDedition>
-			</Editeur>
+			<Auteur>Balzac Honore</Auteur>
+			<Editeur>Hachette</Editeur>
 			
 		</Ouvrage>
 		
@@ -83,22 +59,8 @@
 			<NbreExemplaires>150</NbreExemplaires>
 			<Commentaires>Horreur et romance</Commentaires>
 			<Categorie>Roman</Categorie>
-			<Auteur>
-				<IdAuteur>US001FE</IdAuteur>
-				<Nom>Franc</Nom>
-				<Prenom>Edouard</Prenom>	
-			</Auteur>
-			
-			<Auteur>
-				<IdAuteur>US002MS</IdAuteur>
-				<Nom>Mayer</Nom>
-				<Prenom>Stephane</Prenom>	
-			</Auteur>
-	
-			<Editeur>
-				<IdEditeur>3</IdEditeur>
-				<MaisonDedition>ATLAS</MaisonDedition>
-			</Editeur>
+			<Auteur>Franc Edouard, Mayer Stephane</Auteur>
+			<Editeur>ATLAS</Editeur>
 			
 		</Ouvrage>
 		
@@ -111,16 +73,8 @@
 			<NbreExemplaires>1000</NbreExemplaires>
 			<Commentaires>Classique comme livre</Commentaires>
 			<Categorie>Francaise</Categorie>
-			<Auteur>
-				<IdAuteur>FR002HV</IdAuteur>
-				<Nom>Hugo</Nom>
-				<Prenom>Victor</Prenom>	
-			</Auteur>
-	
-			<Editeur>
-				<IdEditeur>1</IdEditeur>
-				<MaisonDedition>Hachette</MaisonDedition>
-			</Editeur>
+			<Auteur>Hugo Victor</Auteur>
+			<Editeur>Hachette</Editeur>
 			
 		</Ouvrage>
 		
@@ -137,16 +91,8 @@
 			<NbreExemplaires>100</NbreExemplaires>
 			<Commentaires>Pour apprendre les bases</Commentaires>
 			<Categorie>Economie</Categorie>
-			<Auteur>
-				<IdAuteur>FR003JF</IdAuteur>
-				<Nom>Jean</Nom>
-				<Prenom>Francois</Prenom>	
-			</Auteur>
-	
-			<Editeur>
-				<IdEditeur>4</IdEditeur>
-				<MaisonDedition>Larousse</MaisonDedition>
-			</Editeur>
+			<Auteur>Jean Francois</Auteur>
+			<Editeur>Larousse</Editeur>
 			
 		</Ouvrage>
 		
@@ -159,16 +105,8 @@
 			<NbreExemplaires>100</NbreExemplaires>
 			<Commentaires>Pour comprendre le marché</Commentaires>
 			<Categorie>Commerce</Categorie>
-			<Auteur>
-				<IdAuteur>FR004DM</IdAuteur>
-				<Nom>Dupond</Nom>
-				<Prenom>Marc</Prenom>	
-			</Auteur>
-	
-			<Editeur>
-				<IdEditeur>4</IdEditeur>
-				<MaisonDedition>Larousse</MaisonDedition>
-			</Editeur>
+			<Auteur>Dupond Marc</Auteur>
+			<Editeur>Larousse</Editeur>
 			
 		</Ouvrage>
 		
@@ -185,16 +123,8 @@
 			<NbreExemplaires>100</NbreExemplaires>
 			<Commentaires>La retraite politique</Commentaires>
 			<Categorie>Politique</Categorie>
-			<Auteur>
-				<IdAuteur>FR004HF</IdAuteur>
-				<Nom>Hollande</Nom>
-				<Prenom>Francois</Prenom>	
-			</Auteur>
-	
-			<Editeur>
-				<IdEditeur>4</IdEditeur>
-				<MaisonDedition>Larousse</MaisonDedition>
-			</Editeur>
+			<Auteur>Hollande Francois</Auteur>
+			<Editeur>Larousse</Editeur>
 			
 		</Ouvrage>
 		
@@ -207,22 +137,8 @@
 			<NbreExemplaires>500</NbreExemplaires>
 			<Commentaires>Fonctionnement</Commentaires>
 			<Categorie>Politique</Categorie>
-			<Auteur>
-				<IdAuteur>FR005RF</IdAuteur>
-				<Nom>De Rugy</Nom>
-				<Prenom>Francois</Prenom>	
-			</Auteur>
-			
-			<Auteur>
-				<IdAuteur>FR004DM</IdAuteur>
-				<Nom>Dupond</Nom>
-				<Prenom>Marc</Prenom>	
-			</Auteur>
-	
-			<Editeur>
-				<IdEditeur>4</IdEditeur>
-				<MaisonDedition>Larousse</MaisonDedition>
-			</Editeur>
+			<Auteur>De Rugy Francois, Dupond Marc</Auteur>
+			<Editeur>Larousse</Editeur>
 			
 		</Ouvrage>
 		
@@ -239,28 +155,8 @@
 			<NbreExemplaires>500</NbreExemplaires>
 			<Commentaires>Peinture</Commentaires>
 			<Categorie>Peinture</Categorie>
-			<Auteur>
-				<IdAuteur>FR006VL</IdAuteur>
-				<Nom>De Vinci</Nom>
-				<Prenom>Léonard</Prenom>	
-			</Auteur>
-			
-			<Auteur>
-				<IdAuteur>US001FE</IdAuteur>
-				<Nom>Franc</Nom>
-				<Prenom>Edouard</Prenom>	
-			</Auteur>
-			
-			<Auteur>
-				<IdAuteur>US002DW</IdAuteur>
-				<Nom>Denzel</Nom>
-				<Prenom>Washington</Prenom>	
-			</Auteur>
-	
-			<Editeur>
-				<IdEditeur>5</IdEditeur>
-				<MaisonDedition>Louvre</MaisonDedition>
-			</Editeur>
+			<Auteur>De Vinci Léonard, Franc Edouard, Denzel Washington</Auteur>
+			<Editeur>Louvre</Editeur>
 			
 		</Ouvrage>
 

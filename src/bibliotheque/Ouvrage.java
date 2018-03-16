@@ -2,38 +2,40 @@ package bibliotheque;
 
 public class Ouvrage {
 	private String Reference;
-	private Auteur Auteur;
-	private Editeur Editeur;
-	private int Annee;
 	private String Titre;
 	private String Edition;
+	private int Annee;
 	private String ISBN;
 	private int NbrExemplaire;
 	private String Commentaires;
-
-
-	private boolean Disponible;
-	private String Categorie; 
+	private String Categorie;
+	private String Auteur;
+	private String Editeur;
+	private boolean Disponible; 
 	private boolean Emprunte = false;
 
+	
 
-	public Ouvrage(String reference, bibliotheque.Auteur auteur, bibliotheque.Editeur editeur, int annee, String titre,
-			String edition, String iSBN, int nbrExemplaire, String commentaires, boolean disponible, String categorie,
+	public Ouvrage(String reference, String titre, String edition, int annee, String iSBN, int nbrExemplaire,
+			String commentaires, String categorie, String auteur, String editeur, boolean disponible,
 			boolean emprunte) {
 		super();
 		Reference = reference;
-		Auteur = auteur;
-		Editeur = editeur;
-		Annee = annee;
 		Titre = titre;
 		Edition = edition;
+		Annee = annee;
 		ISBN = iSBN;
 		NbrExemplaire = nbrExemplaire;
 		Commentaires = commentaires;
-		Disponible = disponible;
 		Categorie = categorie;
+		Auteur = auteur;
+		Editeur = editeur;
+		Disponible = disponible;
 		Emprunte = emprunte;
 	}
+
+
+
 
 	public String getReference() {
 		return Reference;
@@ -49,28 +51,28 @@ public class Ouvrage {
 
 
 
-	public Auteur getAuteur() {
+	public String getAuteur() {
 		return Auteur;
 	}
 
 
 
 
-	public void setAuteur(Auteur auteur) {
+	public void setAuteur(String auteur) {
 		Auteur = auteur;
 	}
 
 
 
 
-	public Editeur getEditeur() {
+	public String getEditeur() {
 		return Editeur;
 	}
 
 
 
 
-	public void setEditeur(Editeur editeur) {
+	public void setEditeur(String editeur) {
 		Editeur = editeur;
 	}
 

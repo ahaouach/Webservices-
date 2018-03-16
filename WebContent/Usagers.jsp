@@ -56,16 +56,6 @@
 					out.println(((Usager) usagers.elementAt(i)).getEmail());
 				%>
 			</td>
-			<td>
-				<%
-					out.println(((Usager) usagers.elementAt(i)).getPassword());
-				%>
-			</td>
-			<td>
-				<%
-					out.println(((Usager) usagers.elementAt(i)).getConfirmation());
-				%>
-			</td>
 			
 
 		</tr>

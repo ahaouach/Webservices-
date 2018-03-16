@@ -6,8 +6,6 @@ import java.io.IOException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-
-
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
@@ -23,135 +21,10 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import bibliotheque.Ouvrage;
-import bibliotheque.Auteur;
 import bibliotheque.Usager;
 
 
-public abstract class GestionSauvegarde {
-
-	public static void chargement() {
-
-		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-
-		try {
-
-			final DocumentBuilder builder = factory.newDocumentBuilder();
-			final Document document = builder.parse(new File("Bibliotheque.xml"));
-
-			// Affichage du prologue
-
-			System.out.println("************* PROLOGUE ************");
-
-			System.out.println("version : " + document.getXmlVersion());
-
-			System.out.println("encodage : " + document.getXmlEncoding());
-
-			System.out.println("standalone : " + document.getXmlStandalone());
-
-			final Element racine = document.getDocumentElement();
-
-			// Affichage de l'élément racine
-
-			System.out.println("\n************* RACINE ************");
-			System.out.println(racine.getNodeName());
-
-			final NodeList racineNoeuds = racine.getChildNodes();
-			final int nbRacineNoeuds = racineNoeuds.getLength();
-
-			for (int i = 0; i < nbRacineNoeuds; i++) {
-				// Ouvrages et Usagers
-				if (racineNoeuds.item(i).getNodeType() == Node.ELEMENT_NODE
-						&& racineNoeuds.item(i).getNodeName().equals("Ouvrages")) { // Ouvrages
-					System.out.println("\n************* " + racineNoeuds.item(i).getNodeName() + " *************");
-
-					final NodeList ouvragesNoeuds = racineNoeuds.item(i).getChildNodes();
-					final int nbOuvragesNoeuds = ouvragesNoeuds.getLength();
-
-					for (int j = 0; j < nbOuvragesNoeuds; j++) {
-						// Theme
-
-						if (ouvragesNoeuds.item(j).getNodeType() == Node.ELEMENT_NODE) {
-							// Libelle
-							final Element libelle = (Element) ouvragesNoeuds.item(j);
-							System.out.println("\n======== " + ouvragesNoeuds.item(j).getNodeName() + " : "
-									+ libelle.getAttribute("Libelle") + " ========");
-
-							final NodeList themeNoeuds = ouvragesNoeuds.item(j).getChildNodes();
-							final int nbThemeNoeuds = themeNoeuds.getLength();
-
-							for (int k = 0; k < nbThemeNoeuds; k++) {
-								// Ouvrage
-								if (themeNoeuds.item(k).getNodeType() == Node.ELEMENT_NODE) {
-
-									// Disponibilite et Etat emprunt
-									final Element Dispo = (Element) themeNoeuds.item(k);
-									final Element Emprunt = (Element) themeNoeuds.item(k);
-
-									final NodeList ouvrageNoeuds = themeNoeuds.item(k).getChildNodes();
-									final int nbOuvrageNoeuds = ouvrageNoeuds.getLength();
-
-									for (int l = 0; l < nbOuvrageNoeuds; l++) {
-										// Elements d'un ouvrage
-										if (ouvrageNoeuds.item(l).getNodeType() == Node.ELEMENT_NODE) {
-											System.out.println(ouvrageNoeuds.item(l).getNodeName() + " : "
-													+ ouvrageNoeuds.item(l).getTextContent());
-										}
-									}
-
-									System.out.println("Disponible : " + Dispo.getAttribute("Disponible"));
-									System.out.println("Emprunte: " + Emprunt.getAttribute("Emprunte"));
-									System.out.println("\n");
-
-								}
-							}
-						}
-					}
-				}
-
-				else if (racineNoeuds.item(i).getNodeType() == Node.ELEMENT_NODE
-						&& racineNoeuds.item(i).getNodeName().equals("Usagers")) { // Usagers
-					System.out.println("\n************* " + racineNoeuds.item(i).getNodeName() + " *************");
-
-					final NodeList usagersNoeuds = racineNoeuds.item(i).getChildNodes();
-					final int nbUsagersNoeuds = usagersNoeuds.getLength();
-
-					for (int j = 0; j < nbUsagersNoeuds; j++) {
-						// Usager
-
-						if (usagersNoeuds.item(j).getNodeType() == Node.ELEMENT_NODE) {
-
-							System.out.println("\n======== " + usagersNoeuds.item(j).getNodeName() + " ========");
-
-							final NodeList usagerNoeuds = usagersNoeuds.item(j).getChildNodes();
-							final int nbThemeNoeuds = usagerNoeuds.getLength();
-
-							for (int k = 0; k < nbThemeNoeuds; k++) {
-								// Elements d'un usager
-								if (usagerNoeuds.item(k).getNodeType() == Node.ELEMENT_NODE) {
-									System.out.println(usagerNoeuds.item(k).getNodeName() + " : "
-											+ usagerNoeuds.item(k).getTextContent());
-								}
-							}
-						}
-					}
-				}
-			}
-
-		}
-
-		catch (final ParserConfigurationException e) {
-			e.printStackTrace();
-		}
-
-		catch (final SAXException e) {
-			e.printStackTrace();
-		}
-
-		catch (final IOException e) {
-			e.printStackTrace();
-		}
-
-	}
+public class GestionSauvegarde {
 
 	public static void sauvegarde(Ouvrage ouvrage, String theme) {
 
@@ -164,9 +37,8 @@ public abstract class GestionSauvegarde {
 
 			final Element racine = document.getDocumentElement();
 
-			// Affichage de l'élément racine
+			// Elément racine
 
-			System.out.println("\n************* RACINE ************");
 			System.out.println(racine.getNodeName());
 
 			final NodeList racineNoeuds = racine.getChildNodes();
@@ -176,7 +48,6 @@ public abstract class GestionSauvegarde {
 				// Ouvrages et Usagers
 				if (racineNoeuds.item(i).getNodeType() == Node.ELEMENT_NODE
 						&& racineNoeuds.item(i).getNodeName().equals("Ouvrages")) { // Ouvrages
-					System.out.println("\n************* " + racineNoeuds.item(i).getNodeName() + " *************");
 
 					final NodeList ouvragesNoeuds = racineNoeuds.item(i).getChildNodes();
 					final int nbOuvragesNoeuds = ouvragesNoeuds.getLength();
@@ -189,9 +60,8 @@ public abstract class GestionSauvegarde {
 							final Element libelle = (Element) ouvragesNoeuds.item(j);
 
 							if (theme.contains(libelle.getAttribute("Libelle"))) {
-								System.out.println("\n======== " + ouvragesNoeuds.item(j).getNodeName() + " : "
-										+ libelle.getAttribute("Libelle") + " ========");
-								System.out.println("AJOUT OUVRAGE...");
+								
+								System.out.println("Ajout ouvrage...\n");
 
 								final Element ouv = (Element) document.createElement("Ouvrage");
 								ouv.setAttribute("Disponible", "" + ouvrage.getDisponible());
@@ -252,8 +122,9 @@ public abstract class GestionSauvegarde {
 
 								// sortie
 								transformer.transform(source, sortie);
-
-								System.out.println("OUVRAGE AJOUTE!");
+								
+								System.out.println(ouvrage);
+								System.out.println("Ouvrage ajouté dans le thème : "+ theme);
 
 							}
 
@@ -297,9 +168,8 @@ public abstract class GestionSauvegarde {
 
 			final Element racine = document.getDocumentElement();
 
-			// Affichage de l'élément racine
+			// Elément racine
 
-			System.out.println("\n************* RACINE ************");
 			System.out.println(racine.getNodeName());
 
 			final NodeList racineNoeuds = racine.getChildNodes();
@@ -309,9 +179,8 @@ public abstract class GestionSauvegarde {
 				// Ouvrages et Usagers
 				if (racineNoeuds.item(i).getNodeType() == Node.ELEMENT_NODE
 						&& racineNoeuds.item(i).getNodeName().equals("Usagers")) { // Usagers
-					System.out.println("\n************* " + racineNoeuds.item(i).getNodeName() + " *************");
 					
-					System.out.println("AJOUT USAGER...");
+					System.out.println("Ajout nouvel usagé...\n");
 					
 					final Element usager = (Element) document.createElement("Usager");
 					
@@ -356,7 +225,8 @@ public abstract class GestionSauvegarde {
 					// sortie
 					transformer.transform(source, sortie);
 					
-					System.out.println("USAGER AJOUTE!");
+					System.out.println(nouvUsager);
+					System.out.println("Usager Ajouté !");
 					
 				}
 

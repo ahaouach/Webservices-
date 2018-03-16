@@ -12,6 +12,7 @@ public class Usager {
 
 	public static HashMap<String, Ouvrage> listEmpruntUser = new HashMap<>(); // liste des emprunt de chaque user
 
+
 	public Usager(String idUsager, String datenaiss, String nom, String prenom, String adresse, String email) {
 
 		super();
@@ -98,5 +99,10 @@ public class Usager {
 		return result;
 	}
 
+	@Override
+	public String toString() {
+		return "Usager [id=" + id + ", datenaiss=" + datenaiss + ", nom=" + nom + ", prenom=" + prenom + ", adresse="
+				+ adresse + ", email=" + email + "]";
+	}
 
 }

@@ -9,8 +9,8 @@ import bibliotheque.Ouvrage;
 //import bibliotheque.Usager;
 
 public class GestionOuvrage {
-/*private HashMap<String, String> listAuteurs = new HashMap<>();
-	private HashMap<String, Editeur> listEditeurs = new HashMap<>();*/
+	private ArrayList<String> listAuteurs = new ArrayList<>();
+	private ArrayList<String> listEditeurs = new ArrayList<>();
 	private HashMap<String, Ouvrage> listOuvrages = new HashMap<>();
 
 	public GestionOuvrage(HashMap<String, Ouvrage> listOuvrages) {
@@ -20,7 +20,6 @@ public class GestionOuvrage {
 
 	public void ajouter(Ouvrage ouvrage) {
 		listOuvrages.put(ouvrage.getReference(), ouvrage);
-
 	}
 
 	public void supprimer(Ouvrage ouvrage) {
@@ -32,12 +31,11 @@ public class GestionOuvrage {
 
 	}
 
-	/*public ArrayList<Auteur> ajouterAuteur(Auteur aut) {
-		ArrayList<Auteur> auteurs = new ArrayList<>();
-		auteurs.add(aut);
-		return auteurs;
+	public ArrayList<String> ajouterAuteur(String aut) {
+		listAuteurs.add(aut);
+		return listAuteurs;
 
-	}*/
+	}
 
 	/*public ArrayList<Ouvrage> rechercherParTitre(String titre) {
 		ArrayList<Ouvrage> resOuvrage = new ArrayList<>();
@@ -50,12 +48,11 @@ public class GestionOuvrage {
 
 	}*/
 
-	/*public ArrayList<Editeur> ajouterEditeur(Editeur editor) {
-		ArrayList<Editeur> editeurs = new ArrayList<>();
-		editeurs.add(editor);
-		return editeurs;
+	public ArrayList<String> ajouterEditeur(String editor) {
+		listEditeurs.add(editor);
+		return listEditeurs;
 
-	}*/
+	}
 
 public ArrayList<Ouvrage> RechercherParRef(String ref) {
 	ArrayList<Ouvrage> resOuvrage = new ArrayList<>();
@@ -92,6 +89,12 @@ public ArrayList<Ouvrage> RechercherParRef(String ref) {
 		}
 		return res;
 
+	}
+	
+	public void afficher() {
+		System.out.println("\n======== LISTE OUVRAGES ========");
+		listOuvrages.forEach((k,v)->System.out.println(v.toString()));
+		System.out.println("\n================================");
 	}
 
 }
