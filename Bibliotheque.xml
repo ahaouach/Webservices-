@@ -170,8 +170,7 @@
 		<PrenomUsager>John</PrenomUsager>
 		<Datenaiss>01/01/1990</Datenaiss>
 		<Adresse>15 rue de Grou, 33400, Talence, France </Adresse>
-		<Email>john.doe@email.com</Email>
-		
+		<Email>john.doe@email.com</Email>		
 		<Emprunts NbreEmprunt="2">
 			<Reference>0001ART</Reference>
 			<Reference>0002ECO</Reference>
@@ -184,8 +183,7 @@
 		<PrenomUsager>Marc</PrenomUsager>
 		<Datenaiss>10/05/1989</Datenaiss>
 		<Adresse>24 cours de la Marne, 33300, Bordeaux, France </Adresse>
-		<Email>marc.pointet@email.com</Email>
-		
+		<Email>marc.pointet@email.com</Email>		
 		<Emprunts NbreEmprunt="1">
 			<Reference>0002SCI</Reference>
 		</Emprunts>
@@ -197,11 +195,10 @@
 		<PrenomUsager>Bredy</PrenomUsager>
 		<Datenaiss>14/10/1992</Datenaiss>
 		<Adresse>152 cours St Louis, 33300, Bordeaux, France </Adresse>
-		<Email>bredy.anne@email.com</Email>
-		
+		<Email>bredy.anne@email.com</Email>		
 		<Emprunts NbreEmprunt="0">
 		</Emprunts>
     </Usager>
-
+    
   </Usagers>	
 </Bibliotheque>

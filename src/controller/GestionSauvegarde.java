@@ -201,6 +201,16 @@ public class GestionSauvegarde {
 					
 					final Element mail = (Element) document.createElement("Email");
 					mail.appendChild(document.createTextNode(nouvUsager.getEmail()));
+					
+					final Element emprunts = (Element) document.createElement("Emprunts");
+					emprunts.setAttribute("NbreEmprunt", "" + nouvUsager.listEmpruntUser.size());
+					
+					for(int j=0; j < nouvUsager.listEmpruntUser.size(); j++) {
+						
+						final Element ref = (Element) document.createElement("Reference");
+						ref.appendChild(document.createTextNode(nouvUsager.listEmpruntUser.get(j)));
+						emprunts.appendChild(ref);
+					}
 
 					racineNoeuds.item(i).appendChild(usager);
 
@@ -210,6 +220,7 @@ public class GestionSauvegarde {
 					usager.appendChild(dateNaiss);
 					usager.appendChild(adr);
 					usager.appendChild(mail);
+					usager.appendChild(emprunts);
 					
 
 					// Sauvegarde

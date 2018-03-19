@@ -60,7 +60,7 @@ public class BibliothequeApplication extends JFrame{
 		SwingUtilities.invokeLater(new Runnable() {
             public void run() {
             	new BibliothequeApplication();
-            	controller.GestionChargement.chargement(DATA_OUVRAGES);
+            	controller.GestionChargement.chargement(DATA_OUVRAGES);           	
             	controller.GestionChargement.chargement(DATA_USAGERS);
                 
             }
