@@ -2,6 +2,7 @@ package controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -156,7 +157,7 @@ public class GestionChargement {
 						if (usagersNoeuds.item(j).getNodeType() == Node.ELEMENT_NODE) {
 
 							final NodeList usagerNoeuds = usagersNoeuds.item(j).getChildNodes();
-							final int nbThemeNoeuds = usagerNoeuds.getLength();
+							final int nbUsagerNoeuds = usagerNoeuds.getLength();
 							
 							String idUsager="";
 							String datenaiss="";
@@ -164,8 +165,9 @@ public class GestionChargement {
 							String prenom="";
 							String adresse="";
 							String email="";
+							ArrayList<String> listEmpruntUser = new ArrayList<>();
 							
-							for (int k = 0; k < nbThemeNoeuds; k++) {
+							for (int k = 0; k < nbUsagerNoeuds; k++) {
 								// Elements d'un usager
 								if (usagerNoeuds.item(k).getNodeType() == Node.ELEMENT_NODE) {
 
@@ -175,11 +177,23 @@ public class GestionChargement {
 									if(usagerNoeuds.item(k).getNodeName().equals("Datenaiss")) prenom = usagerNoeuds.item(k).getTextContent();
 									if(usagerNoeuds.item(k).getNodeName().equals("Adresse")) adresse = usagerNoeuds.item(k).getTextContent();
 									if(usagerNoeuds.item(k).getNodeName().equals("Email")) email = usagerNoeuds.item(k).getTextContent();
+									
+									final NodeList EmpruntsNoeuds = usagerNoeuds.item(k).getChildNodes();
+									final int NbreEmpruntNoeuds = EmpruntsNoeuds.getLength();
+									
+									for (int l = 0; l < NbreEmpruntNoeuds; l++) {
+										//Emprunts de l'usager
+										if (EmpruntsNoeuds.item(l).getNodeType() == Node.ELEMENT_NODE) {
+											if(EmpruntsNoeuds.item(l).getNodeName().equals("Reference")) {
+												listEmpruntUser.add(EmpruntsNoeuds.item(l).getTextContent());
+											}
+										}
+									}
 								}
 							}
 							
 							//Chargement dans la liste des ouvrages
-							Usager u = new Usager(idUsager, datenaiss, nom, prenom, adresse, email);
+							Usager u = new Usager(idUsager, datenaiss, nom, prenom, adresse, email, listEmpruntUser);
 							donneesUsagersChargees.AjouterUsagers(u);
 						}
 					}

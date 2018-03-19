@@ -2,7 +2,8 @@
 <!ELEMENT Bibliotheque (Ouvrages, Usagers)>
 
 <!ELEMENT Usagers (Usager+)>
-<!ELEMENT Usager (IdUsager?, NomUsager, PrenomUsager, Datenaiss, Adresse, Email)>
+<!ELEMENT Usager (IdUsager?, NomUsager, PrenomUsager, Datenaiss, Adresse, Email, Emprunts)>
+<!ELEMENT Emprunts (Reference+)
 
 <!ELEMENT Ouvrages (Theme+)>
 <!ELEMENT Theme (Ouvrage+)>
@@ -22,12 +23,8 @@
 <!ELEMENT Editeur (#PCDATA)>	
 
 
-<!ELEMENT IdAuteur (#PCDATA)>
-<!ELEMENT Nom (#PCDATA)>
-<!ELEMENT Prenom (#PCDATA)>
 
-<!ELEMENT IdEditeur (#PCDATA)>
-<!ELEMENT MaisonDedition (#PCDATA)>
+
 
 <!ELEMENT IdUsager (#PCDATA)>
 <!ELEMENT NomUsager (#PCDATA)>
@@ -36,6 +33,8 @@
 <!ELEMENT Adresse (#PCDATA)>
 <!ELEMENT Email (#PCDATA)>
 
+
 <!ATTLIST Theme Libelle CDATA #IMPLIED>
+<!ATTLIST Emprunts NbreEmprunt CDATA #IMPLIED>
 <!ATTLIST Ouvrage Disponible (true | false) #REQUIRED>
 <!ATTLIST Ouvrage Emprunte (true | false) #REQUIRED>

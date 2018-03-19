@@ -18,7 +18,7 @@
 			
 		</Ouvrage>
 		
-		<Ouvrage Disponible="false" Emprunte="false">
+		<Ouvrage Disponible="false" Emprunte="true">
 			<Reference>0002SCI</Reference>
 			<Titre>Web Services</Titre>
 			<Edition>5</Edition>
@@ -96,7 +96,7 @@
 			
 		</Ouvrage>
 		
-		<Ouvrage Disponible="true" Emprunte="false">
+		<Ouvrage Disponible="false" Emprunte="true">
 			<Reference>0002ECO</Reference>
 			<Titre>Offre et Demande</Titre>
 			<Edition>4</Edition>
@@ -146,7 +146,7 @@
 	
 	<Theme Libelle="Art">
 		
-		<Ouvrage Disponible="true" Emprunte="false">
+		<Ouvrage Disponible="false" Emprunte="true">
 			<Reference>0001ART</Reference>
 			<Titre>Mona Lisa</Titre>
 			<Edition>1</Edition>
@@ -171,6 +171,11 @@
 		<Datenaiss>01/01/1990</Datenaiss>
 		<Adresse>15 rue de Grou, 33400, Talence, France </Adresse>
 		<Email>john.doe@email.com</Email>
+		
+		<Emprunts NbreEmprunt="2">
+			<Reference>0001ART</Reference>
+			<Reference>0002ECO</Reference>
+		</Emprunts>
     </Usager>
 	
 	<Usager>
@@ -180,6 +185,10 @@
 		<Datenaiss>10/05/1989</Datenaiss>
 		<Adresse>24 cours de la Marne, 33300, Bordeaux, France </Adresse>
 		<Email>marc.pointet@email.com</Email>
+		
+		<Emprunts NbreEmprunt="1">
+			<Reference>0002SCI</Reference>
+		</Emprunts>
     </Usager>
 	
 	<Usager>
@@ -189,6 +198,9 @@
 		<Datenaiss>14/10/1992</Datenaiss>
 		<Adresse>152 cours St Louis, 33300, Bordeaux, France </Adresse>
 		<Email>bredy.anne@email.com</Email>
+		
+		<Emprunts NbreEmprunt="0">
+		</Emprunts>
     </Usager>
 
   </Usagers>	

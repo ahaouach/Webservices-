@@ -5,24 +5,24 @@ import bibliotheque.Usager;
 
 public class GestionEmprunt {
 
-	public void emprunter(Ouvrage ouv) {
+	public void emprunter(Ouvrage ouv, Usager us) {
 
 		if (!ouv.getEmprunte()) {
 			ouv.setEmprunte(true);
-			System.out.println(" emprunter l'ouvrage !");
-			Usager.listEmpruntUser.put(ouv.getReference(), ouv);
+			System.out.println(" EmpruntÃ© l'ouvrage !");
+			us.listEmpruntUser.add(ouv.getReference());
 		} else
-			System.out.println("L'ouvrage est déjà emprunté !");
-		Usager.listEmpruntUser.get(ouv.getReference()); // liste des emprunt faites par un user
+			System.out.println("L'ouvrage est dÃ©jÃ  empruntÃ© !");
+		us.listEmpruntUser.add(ouv.getReference()); // liste des emprunt faites par un user
 	}
 
 	public void retourOuvrage(Ouvrage ouv) {
 		if (ouv.getEmprunte()) {
 			ouv.setEmprunte(false);
-			System.out.println(" l'ouvrage est retourné !");
+			System.out.println(" l'ouvrage est retournÃ© !");
 		} else
-			System.out.println(" l'ouvrage est toujours emprunté !");
-		Usager.listEmpruntUser.get(ouv.getReference());
+			System.out.println(" l'ouvrage est toujours empruntÃ© !");
+		//Usager.listEmpruntUser.get(ouv.getReference());
 	}
 
 }

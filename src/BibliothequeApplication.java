@@ -9,9 +9,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
-import bibliotheque.Auteur;
-import bibliotheque.Editeur;
-import bibliotheque.Usager;
 import bibliotheque.Usagers;
 import controller.GestionOuvrage;
 

@@ -207,9 +207,20 @@ public class Ouvrage {
 
 	@Override
 	public String toString() {
-		return "Ouvrage [Reference=" + Reference + ", Auteur=" + Auteur + ", Editeur=" + Editeur + ", Titre=" + Titre
-				+ ", Edition=" + Edition + ", ISBN=" + ISBN + ", NbrExemplaire=" + NbrExemplaire + ", Commentaires="
-				+ Commentaires + ", Disponible=" + Disponible + ", Categorie=" + Categorie + "]";
+		StringBuffer str = new StringBuffer("Ouvrage [ Reference : " + Reference + ", Auteur(s) :" + Auteur + ", Editeur : " + Editeur + ", Titre: " + Titre
+				+ ", Edition : " + Edition + ", ISBN : " + ISBN + ", NbrExemplaire : " + NbrExemplaire + ", Categorie : " + Categorie +", Commentaires : "
+				+ Commentaires);
+		if(Disponible)
+			str.append(", Disponible : Oui");
+		else 
+			str.append(", Disponible : Non");
+			
+		if(Emprunte)
+			str.append(", Emprunte : Oui");
+		else
+			str.append(", Emprunte : Non");
+			
+		return str.append(" ] ").toString();
 	}
 
 	@Override

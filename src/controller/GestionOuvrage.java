@@ -26,8 +26,13 @@ public class GestionOuvrage {
 		listOuvrages.remove(ouvrage.getReference());
 	}
 
-	public Ouvrage rechercherID(Ouvrage ouvrage) {
-		return listOuvrages.get(ouvrage.getReference());
+	public Ouvrage RechercherRef(String ref) {
+		for (Ouvrage O : listOuvrages.values()) {
+			if (O.getReference().equals(ref)){
+				return O;
+			}
+		}
+		return null;
 
 	}
 
