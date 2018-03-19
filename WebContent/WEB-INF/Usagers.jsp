@@ -6,7 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Usagers</title>
-<jsp:useBean id='usagers' scope='request' class='java.util.Vector<Usager>' />
+<jsp:useBean id='usagers' scope='request'
+	class='java.util.Vector<Usager>' />
 <%@ page import="java.util.Vector, bibliotheque.Usager"%>
 </head>
 <body>
@@ -19,8 +20,10 @@
 		<th>NOM</th>
 		<th>PRENOM</th>
 		<th>ADRESSE</th>
+		<th>DATENAISSANCE</th>
 		<th>EMAIL</th>
-		<th>PASSWORD</th>
+
+
 		<%
 			for (int i = 0; i < usagers.size(); i++) {
 		%>
@@ -33,7 +36,6 @@
 			<td>
 				<%
 					out.println(((Usager) usagers.elementAt(i)).getNom());
-				
 				%>
 			</td>
 			<td>
@@ -56,7 +58,7 @@
 					out.println(((Usager) usagers.elementAt(i)).getEmail());
 				%>
 			</td>
-			
+
 
 		</tr>
 		<%

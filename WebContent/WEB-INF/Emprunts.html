@@ -3,40 +3,51 @@
 <head>
 
 <meta charset="utf-8">
-	<script src="bootstrap/js/jquery.js"></script>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
-	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="bootstrap/css/accueil.css" rel="stylesheet">
+<script src="bootstrap/js/jquery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="bootstrap/css/accueil.css" rel="stylesheet">
 
 <title></title>
 </head>
 <body>
 
-	<form action="" name="saisie" > 
-		<h1> Gestion des emprunts:  </h1>
+	<form action="" name="saisie">
+		<h1>Gestion des emprunts:</h1>
 		<table>
 			<tr>
-				<td>
-				Nom de l'abonnée:
-					  
-				</td>
-				<td>
-					<input type="text" size=15 name="nom"/>
-				</td>
+				<td>Référence de l'abonnée :</td>
+				<td><input type="text" size=15 name="Reference" /></td>
+			</tr>
+			<tr>
+				<td>Nom de l'abonnée:</td>
+				<td><input type="text" size=15 name="nom" /></td>
+			</tr>
+			<tr>
+				<td>Prénom de l'abonnée</td>
+				<td><input type="text" size=15 name="nom" /></td>
 			</tr>
 			<tr>
 				<td>
-				Référence du document:	 
-				</td>
-				<td>
-					<input type="number" size=15 name="référence"/>
-				</td>
+				<td>Ouvrages empruntés :</td>
+				<td><input type="number" size=15 name="référence" /></td>
+
+				<td>Référence des ouvrages empruntés:</td>
+				<td><input type="text" size=15 name="référence" /></td>
+				<td>Ouvrages</td>
+				<td><input type="text" size=15 name="nom" /></td>
+			</tr>
+
+			<tr>
+
+				<td><button name="valider" type="submit"
+						style="height: 40px; width: 100px">VALIDER</button></td>
 			</tr>
 
 
 
 
-   		</table>  
+		</table>
 	</form>
 
 
