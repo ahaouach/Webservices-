@@ -1,5 +1,7 @@
-import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.Desktop;
 import java.awt.GridLayout;
+import java.net.URL;
 import java.util.HashMap;
 
 import javax.swing.JButton;
@@ -12,29 +14,52 @@ import javax.swing.SwingUtilities;
 import bibliotheque.Usagers;
 import controller.GestionOuvrage;
 
+/**
+ * 
+ * @author Kourouma Sékou Mohamed, Ahaouach Azelarab , Meleiro Lucille
+ * @version 1.0
+ * 
+ * Cette application permet la gestion d'une bibliothèque en interne c'est à dire pour le personnel
+ * qui assure les services d'emprunt et de retour des ouvrages.
+ * Elle permet aussi au personnel de gérer les usagers de la bibliothèque.
+ *
+ */
+
 public class BibliothequeApplication extends JFrame{
 	private static final long serialVersionUID = 1L;
 	
 	public BibliothequeApplication() {
 		super("BIBLIOTHEQUE");
 		
-		
-		JPanel panel = new JPanel();
-		panel.setLayout(new GridLayout(0, 1));
+		Container content = getContentPane();
+		JPanel message = new JPanel();
+		JPanel boutons = new JPanel();
+		message.setLayout(new GridLayout(0, 1));
+		boutons.setLayout(new GridLayout(0, 2));
 		JButton quit = new JButton("Quitter");
-		JLabel label1 = new JLabel("Bienvenue sur l'application de la bibliothèque!");
-		JLabel label2 = new JLabel("Laissez cette fênetre ouverte pendant son utilisation...");
+		JButton lunch = new JButton("Lancer");
+		JLabel msg1 = new JLabel("Bienvenue sur l'application de la bibliothèque!");
+		JLabel msg2 = new JLabel("Laissez cette fênetre ouverte pendant son utilisation...");
 		
-		panel.add(label1);
-		panel.add(label2);
-		panel.add(quit, BorderLayout.SOUTH);
-		setContentPane(panel);
-		
+		message.add(msg1);
+		message.add(msg2);
+		boutons.add(lunch);
+		boutons.add(quit);
+		message.add(boutons);
+		content.add(message);		
 		
 		quit.addActionListener(e -> {
 			if(quitter() == JOptionPane.YES_OPTION) {
 				System.out.println("\nAu revoir, à bientôt!");
 				System.exit(0);
+			}
+		});
+		
+		lunch.addActionListener(e -> {
+			try {
+			    Desktop.getDesktop().browse(new URL("http://localhost:8080/Bibliotheque/").toURI());
+			} catch (Exception e1) {
+			    e1.printStackTrace();
 			}
 		});
 		

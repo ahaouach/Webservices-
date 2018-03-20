@@ -3,7 +3,7 @@
 
 <!ELEMENT Usagers (Usager+)>
 <!ELEMENT Usager (IdUsager?, NomUsager, PrenomUsager, Datenaiss, Adresse, Email, Emprunts)>
-<!ELEMENT Emprunts (Reference+)
+<!ELEMENT Emprunts (Reference*)>
 
 <!ELEMENT Ouvrages (Theme+)>
 <!ELEMENT Theme (Ouvrage+)>

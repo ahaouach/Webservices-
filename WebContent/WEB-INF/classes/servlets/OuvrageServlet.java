@@ -14,7 +14,7 @@ import bibliotheque.Ouvrage;
 /**
  * Servlet implementation class UsagerServlet
  */
-@WebServlet("/UsagerServlet")
+@WebServlet("/OuvrageServlet")
 public class OuvrageServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public static final String VUE = "/WEB-INF/Ouvrage.jsp";
@@ -75,11 +75,11 @@ public class OuvrageServlet extends HttpServlet {
 
 		HashMap<String, Ouvrage> Ouv = new HashMap<>();
 
-		Ouvrage ouv = new Ouvrage(ref, edition, editeur, titre,  auteur, Integer.parseInt(annee), categorie, commentaire,
-				Boolean.parseBoolean(disponible), Boolean.parseBoolean(emprunt), isbn, Integer.parseInt(nbrexemplaire));
+		Ouvrage ouv = new Ouvrage(ref, titre, edition, Integer.parseInt(annee), isbn, Integer.parseInt(nbrexemplaire), commentaire, categorie, auteur, editeur, Boolean.parseBoolean(disponible), Boolean.parseBoolean(emprunt));
+				
 		Ouv.put(ouv.getReference(), ouv);
 
-		request.setAttribute(ouv.getReference(), Ouv);
+		request.setAttribute("ouvrage", Ouv);
 
 		getServletConfig().getServletContext().getRequestDispatcher(VUE).forward(request, response);
 		// response.getWriter().append("Served at: ").append(request.getContextPath());

@@ -1,4 +1,4 @@
-package bibliothequeServlet;
+package servlets;
 
 import java.io.IOException;
 
